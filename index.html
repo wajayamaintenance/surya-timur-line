@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Hub - PT Surya Timur Line</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        
+        :root {
+            --primary-blue: #002B5B;
+            --secondary-blue: #1A5F7A;
+            --accent-gold: #C0A150;
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-primary { background-color: var(--primary-blue); }
+        .text-accent { color: var(--accent-gold); }
+        
+        .hero-section {
+            position: relative;
+            background-color: var(--primary-blue);
+            overflow: hidden;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 43, 91, 0.6), rgba(0, 43, 91, 0.7)), 
+                              url('https://suryatimurline.com/wp-content/uploads/2024/03/Mask-groupa.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 60px 0;
+        }
+        
+        .transition-smooth { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .select-custom {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23002B5B' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 1rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            appearance: none;
+        }
+
+        .service-card {
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            min-height: 220px;
+        }
+        
+        .service-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-action {
+            font-size: 10px;
+            font-weight: 800;
+            padding: 12px 6px;
+            border-radius: 10px;
+            transition: all 0.2s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .item-dropdown {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #f1f5f9;
+            background-color: #f8fafc;
+            width: 100%;
+            margin-bottom: 15px;
+            cursor: pointer;
+            outline: none;
+            color: var(--primary-blue);
+        }
+
+        .logo-img {
+            max-height: 45px; 
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Penyesuaian khusus untuk posisi tengah */
+        .controls-container {
+            margin-top: -120px; /* Menarik container ke atas area hero */
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-gray-900">
+
+    <!-- Header / Navbar -->
+    <nav class="bg-primary text-white p-4 sticky top-0 z-50 shadow-xl border-b border-white/10">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center gap-4">
+                <div class="bg-white p-2 rounded-xl shadow-md">
+                    <img src="LogoWajaya.png" alt="Logo Koperasi Wajaya" class="logo-img" onerror="this.src='https://ui-avatars.com/api/?name=WJL&background=002B5B&color=fff&bold=true'">
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl md:text-2xl block leading-tight text-accent">KOPERASI WAHANA JALA REKADAYA</span>
+                    <span class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-blue-200 opacity-80">Kota Jakarta Barat, DKI Jakarta</span>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <a href="https://https://suryatimurline.com/" target="_blank" class="text-xs font-bold px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10 transition-all">
+                    <i class="fas fa-globe mr-2"></i>Official Website PT Surya Timur Line
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content flex flex-col items-center justify-center text-center text-white px-4">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-5 py-2 bg-accent-gold/20 border border-accent/40 text-accent rounded-full text-xs font-black mb-8 uppercase tracking-widest shadow-lg backdrop-blur-md">
+                    <span class="flex h-2 w-2 rounded-full bg-accent-gold animate-ping"></span>
+                    Maintenance Record Portal
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tighter drop-shadow-xl">PT Surya Timur Line</h2>
+                <p class="text-blue-50 text-base md:text-lg max-w-2xl mx-auto opacity-95 leading-relaxed font-medium mb-12">
+                    Akses digital terpusat untuk sertifikasi sistem keselamatan dan dokumentasi teknis armada.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selection Controls (Diposisikan di tengah) -->
+    <div class="container mx-auto px-4 relative z-20 controls-container">
+        <div class="max-w-3xl mx-auto bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-10 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8 items-end">
+                <!-- Ship Selector -->
+                <div class="flex flex-col">
+                    <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-3 ml-1 flex items-center gap-2">
+                        <i class="fas fa-ship text-accent"></i> Pilih Armada Kapal
+                    </label>
+                    <select id="shipSelector" onchange="handleShipChange()" class="select-custom w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-blue-500 transition-all font-bold text-primary-blue text-md">
+                        <option value="">-- Pilih Nama Kapal --</option>
+                    </select>
+                </div>
+                <!-- Year Selector -->
+                <div id="yearContainer" class="flex flex-col opacity-40 pointer-events-none transition-smooth">
+                    <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-3 ml-1 flex items-center gap-2">
+                        <i class="fas fa-calendar-alt text-accent"></i> Pilih Tahun Service
+                    </label>
+                    <select id="yearSelector" onchange="updateShipPortal()" class="select-custom w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-blue-500 transition-all font-bold text-primary-blue text-md">
+                        <option value="">Pilih Kapal Terlebih Dahulu</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Portal Display) -->
+    <main class="py-12 container mx-auto px-4">
+        
+        <!-- Portal Display Area -->
+        <div id="portalDisplay" class="hidden transition-smooth opacity-0 translate-y-8 max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-4 gap-10">
+                <!-- Ship Profile Card -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-xl sticky top-28">
+                        <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                            <img id="shipImage" src="" alt="Kapal" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p id="shipType" class="text-accent text-[9px] font-black uppercase tracking-[0.2em] mb-1">Tipe Kapal</p>
+                            <h3 id="shipNameDisplay" class="text-xl font-extrabold text-primary-blue uppercase leading-tight mb-3">Nama Kapal</h3>
+                            <div id="displayYear" class="text-[11px] font-black text-blue-600 mb-5 bg-blue-50 inline-block px-4 py-1.5 rounded-full uppercase tracking-tighter">
+                                Tahun 2025
+                            </div>
+                            
+                            <div class="pt-5 border-t border-gray-100">
+                                <span class="inline-flex items-center px-4 py-2 rounded-xl bg-green-50 text-green-600 text-[10px] font-bold">
+                                    <i class="fas fa-check-circle mr-2"></i> DATA TERVERIFIKASI
+                                </span>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Records Grid -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm">
+                        <div class="flex items-center justify-between mb-8">
+                            <h4 class="text-xs font-black text-primary-blue uppercase tracking-[0.2em] flex items-center gap-3">
+                                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                                Maintenance Documents
+                            </h4>
+                        </div>
+                        <div id="certificateGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="text-center py-20 transition-smooth max-w-xl mx-auto">
+            <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                <i class="fas fa-anchor text-4xl text-blue-200"></i>
+            </div>
+            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-[0.3em]">Menunggu pemilihan armada kapal</h3>
+            <p class="text-gray-400 text-xs mt-2">Silakan pilih kapal dan tahun untuk melihat catatan pemeliharaan.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white border-t border-gray-100 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-black text-primary-blue text-[10px] uppercase tracking-[0.4em] mb-2">KOPERASI WAHANA JALA REKADAYA &copy; 2025</p>
+            <p class="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Wajaya Corp</p>
+        </div>
+    </footer>
+
+    <script>
+        const defaultServices = [
+            { category: 'CO2 System', cert: '#', doc: '#', icon: 'fas fa-wind' },
+            { category: 'EEBD', cert: '#', doc: '#', icon: 'fas fa-mask' },
+            { category: 'APAR', cert: '#', doc: '#', icon: 'fas fa-fire-extinguisher' },
+            { category: 'HRU', cert: '#', doc: '#', icon: 'fas fa-anchor' },
+            { category: 'ILR', cert: '#', doc: '#', icon: 'fas fa-life-ring' },
+            { category: 'Sekoci', cert: '#', doc: '#', icon: 'fas fa-ship' }
+        ];
+
+        const fleetData = {
+            'rishel': {
+                name: 'KMP RISHEL',
+                type: 'Ro-Ro Passenger Ship',
+                image: 'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/236/2024/05/21/kmp-wira-3385688903.jpg',
+                history: {
+                    '2025': [...defaultServices]
+                }
+            },
+            'zoey': {
+                name: 'KMP ZOEY',
+                type: 'Ro-Ro Passenger Ship',
+                image: 'https://api.maritimeoptima.com/vesselpictures/1112719', 
+                history: {
+                    '2025': [
+                        { category: 'CO2 System', cert: 'https://drive.google.com/file/d/19sKBeWYq0rCL9U1Qyl1vRFWk9Jc259Cp/view?usp=sharing', doc: '#', icon: 'fas fa-wind' },
+                        { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1h7j_eCbzldva28edZOivICnZP3FhLcHi/view?usp=sharing', doc: '#', icon: 'fas fa-mask' },
+                        { category: 'Fire Extinguisher (APAR)', icon: 'fas fa-fire-extinguisher', isMultiItem: true,
+                            items: [
+                            { id: 'APAR_DCS-FE.25.001', cert: 'https://drive.google.com/file/d/1xd2twTLYCC2Q7V0N1yjTCStMDusonMHk/view?usp=sharing', doc: '' },
+                            { id: 'APAR_DCS-FE.25.002', cert: 'https://drive.google.com/file/d/1dM79za_kTKOR1VXZSoLfOEsv2RTeE4qU/view?usp=sharing', doc: '' } ]
+                        },
+                        { category: 'HRU', icon: 'fas fa-anchor', isMultiItem: true, 
+                            items: [
+                            { id: 'HRU_1701892-1700731-17019891-1700745-1601842-1601847', cert: 'https://drive.google.com/file/d/1uggVs2du4TDnVqy6VvwtK1OV8oYAmeaU/view?usp=sharing', doc: '' },
+                            { id: 'HRU_1801175-1800238-1801170-1800247-1801172-1801169', cert: 'https://drive.google.com/file/d/1rOzC6pWcBvF6LQIBillZ8MlG3OmdQefC/view?usp=sharing', doc: '' } ]
+                        },
+                        { 
+                            category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
+                            items: [
+                                { id: '18308', cert: 'https://drive.google.com/file/d/1rhCI4zcEU6UyKICYcQC1qjekN1joXHmF/view?usp=sharing', doc: '' },
+                            { id: '18309', cert: 'https://drive.google.com/file/d/12_WZBmfpMKvtsoAKQ1d7HVFw2iLz_78c/view?usp=drive_link', doc: '' },
+                            { id: '18310', cert: 'https://drive.google.com/file/d/1VEstgp-X7Ocn8Ktj2E69u8h13PZtxVAw/view?usp=drive_link', doc: '' },
+                            { id: '18311', cert: 'https://drive.google.com/file/d/1BHHsC1vvsNkvCYQnxmCMUxP2HUAfC9Zq/view?usp=drive_link', doc: '' },
+                            { id: '18312', cert: 'https://drive.google.com/file/d/1X5Tt-nvbp5GjcKtaDkDo6-XKogH1SIMa/view?usp=drive_link', doc: '' },
+                            { id: '18313', cert: 'https://drive.google.com/file/d/1501Au10IC1Dlbeq_YMZjP5ToKSW2R7xa/view?usp=drive_link', doc: '' },
+                            { id: '18314', cert: 'https://drive.google.com/file/d/1bfsjQGgBwus7dK8rLlNHDHFr5yEvuMnq/view?usp=drive_link', doc: '' },
+                            { id: '18315', cert: 'https://drive.google.com/file/d/1CrwZZI8u2lVUqHe6YexdYYcbDpCOImUM/view?usp=drive_link', doc: '' },
+                            { id: '18316', cert: 'https://drive.google.com/file/d/1g-2NM8Y5Wt2_angDBQSSkdd1L_5WQp0U/view?usp=drive_link', doc: '' },
+                            { id: '18317', cert: 'https://drive.google.com/file/d/1d8k6L2ZXIxvq8FHWc58h767rKJ8Gd0F0/view?usp=drive_link', doc: '' },
+                            { id: '18318', cert: 'https://drive.google.com/file/d/1sbUUOsrtRQ-gz84H3jKB55aGPA6oUOK5/view?usp=drive_link', doc: '' },
+                            { id: '18319', cert: 'https://drive.google.com/file/d/1Rra8XJtbo4PFihCLWb5ygbmU3Vudbbv2/view?usp=drive_link', doc: '' },
+                            { id: '18320', cert: 'https://drive.google.com/file/d/1KR9U6NxFifNv6Y8e-dv_fy5GL8-iO9MH/view?usp=drive_link', doc: '' },
+                            { id: '18321', cert: 'https://drive.google.com/file/d/1sDnSbs8mi4lwlzBFkJO4SM6wSftNN9kC/view?usp=drive_link', doc: '' },
+                            { id: '18322', cert: 'https://drive.google.com/drive/folders/1VUDmdr1H5CUaQm6C_fPbOn1zDh0ROdAo?usp=drive_link', doc: '' },
+                            { id: '18336', cert: 'https://drive.google.com/file/d/1kQdM5JK8PPg1aq320vuRNGxLHtqADacF/view?usp=drive_link', doc: '' },
+                            { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1BRjjQIyFbliiZgO5QbhM6XEPS_a_3NL5/view?usp=drive_link', doc: '' },
+                            { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1GjPPAt5IGBOwweglUs2Ap79y1jZWnNcO/view?usp=drive_link', doc: '' },
+                            { id: 'AA-250570', cert: 'https://drive.google.com/file/d/13Q0S1MawOg8wmiinZ7TXiZU6SK_1LoNV/view?usp=drive_link', doc: 'AA-250547' },
+                            { id: 'AA-250571', cert: 'https://drive.google.com/file/d/19c7R-zTpuhfL6qT-ynolApLdufbNtDPO/view?usp=drive_link', doc: '' },
+                            { id: 'S50-17010', cert: 'https://drive.google.com/file/d/101hL0vMMAMsl2wMsdlVVn0CIqZ4Sh0Z0/view?usp=drive_link', doc: '' },
+                            { id: 'S50-17011', cert: 'https://drive.google.com/file/d/11T-E-LjirGmhSXVECCAJ0jfsDshw3V7M/view?usp=drive_link', doc: '' }
+                            ] 
+                        }
+                    ]
+                }
+            },
+            'eirene': { 
+                name: 'KMP EIRENE', 
+                type: 'Ro-Ro Passenger Ship', 
+                image: 'https://www.wjl-line.com/assets/wira-berlian.webp', 
+                history: { '2025': [...defaultServices] }
+            }
+        };
+
+        function init() {
+            const selector = document.getElementById('shipSelector');
+            Object.keys(fleetData).sort((a,b) => fleetData[a].name.localeCompare(fleetData[b].name)).forEach(key => {
+                let option = document.createElement('option');
+                option.value = key;
+                option.text = fleetData[key].name;
+                selector.appendChild(option);
+            });
+        }
+
+        function handleShipChange() {
+            const shipId = document.getElementById('shipSelector').value;
+            const yearContainer = document.getElementById('yearContainer');
+            const yearSelector = document.getElementById('yearSelector');
+            const portal = document.getElementById('portalDisplay');
+            const emptyState = document.getElementById('emptyState');
+
+            if (!shipId) {
+                yearContainer.classList.add('opacity-40', 'pointer-events-none');
+                portal.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            // Populate Years
+            const years = Object.keys(fleetData[shipId].history).sort((a, b) => b - a);
+            yearSelector.innerHTML = years.map(yr => `<option value="${yr}">Tahun Service ${yr}</option>`).join('');
+            
+            yearContainer.classList.remove('opacity-40', 'pointer-events-none');
+            updateShipPortal(); 
+        }
+
+        function updateShipPortal() {
+            const shipId = document.getElementById('shipSelector').value;
+            const year = document.getElementById('yearSelector').value;
+            const portal = document.getElementById('portalDisplay');
+            const emptyState = document.getElementById('emptyState');
+            const grid = document.getElementById('certificateGrid');
+
+            if (!shipId || !year) return;
+
+            const shipData = fleetData[shipId];
+            const records = shipData.history[year];
+
+            grid.innerHTML = '';
+            
+            records.forEach((item, index) => {
+                let cardHTML = '';
+                if (item.isMultiItem) {
+                    const options = item.items.map(it => `<option value="${it.id}" data-cert="${it.cert || '#'}" data-doc="${it.doc || '#'}">ID: ${it.id}</option>`).join('');
+                    cardHTML = `
+                        <div class="service-card rounded-2xl p-6 border-blue-50">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary-blue border border-blue-50 text-lg">
+                                    <i class="${item.icon}"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-[10px] font-black text-primary-blue uppercase tracking-wider">${item.category}</h5>
+                                    <span class="text-[8px] font-bold text-accent px-1.5 py-0.5 bg-accent/10 rounded uppercase">Multiple Unit</span>
+                                </div>
+                            </div>
+                            <select onchange="changeMultiItem(this, ${index})" class="item-dropdown">${options}</select>
+                            <div class="grid grid-cols-2 gap-3 mt-auto">
+                                <a id="cert-link-${index}" href="${item.items[0].cert || '#'}" target="_blank" class="btn-action bg-blue-600 text-white shadow-md shadow-blue-100 ${(!item.items[0].cert || item.items[0].cert === '#') ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-file-pdf"></i> SERTIFIKAT</a>
+                                <a id="doc-link-${index}" href="${item.items[0].doc || '#'}" target="_blank" class="btn-action bg-amber-500 text-white shadow-md shadow-amber-100 ${(!item.items[0].doc || item.items[0].doc === '#') ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-camera"></i> DOKUMEN</a>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    cardHTML = `
+                        <div class="service-card rounded-2xl p-6">
+                            <div class="flex items-center gap-4 mb-5">
+                                <div class="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-primary-blue border border-gray-100 text-lg">
+                                    <i class="${item.icon}"></i>
+                                </div>
+                                <h5 class="text-[10px] font-black text-primary-blue uppercase tracking-wider">${item.category}</h5>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mt-auto">
+                                <a href="${item.cert}" target="_blank" class="btn-action bg-blue-600 text-white shadow-md shadow-blue-100 ${item.cert === '#' ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-file-pdf"></i> SERTIFIKAT</a>
+                                <a href="${item.doc}" target="_blank" class="btn-action bg-amber-500 text-white shadow-md shadow-amber-100 ${item.doc === '#' ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-camera"></i> DOKUMEN</a>
+                            </div>
+                        </div>
+                    `;
+                }
+                grid.insertAdjacentHTML('beforeend', cardHTML);
+            });
+
+            document.getElementById('shipNameDisplay').innerText = shipData.name;
+            document.getElementById('shipType').innerText = shipData.type;
+            document.getElementById('shipImage').src = shipData.image;
+            document.getElementById('displayYear').innerText = `Tahun Service ${year}`;
+
+            emptyState.classList.add('hidden');
+            portal.classList.remove('hidden');
+            setTimeout(() => {
+                portal.classList.remove('opacity-0', 'translate-y-8');
+                portal.classList.add('opacity-100', 'translate-y-0');
+            }, 50);
+        }
+
+        function changeMultiItem(selectElement, index) {
+            const opt = selectElement.options[selectElement.selectedIndex];
+            const certLink = document.getElementById(`cert-link-${index}`);
+            const docLink = document.getElementById(`doc-link-${index}`);
+            
+            const certUrl = opt.getAttribute('data-cert');
+            const docUrl = opt.getAttribute('data-doc');
+
+            certLink.href = certUrl;
+            docLink.href = docUrl;
+
+            certLink.classList.toggle('opacity-50', certUrl === '#');
+            certLink.classList.toggle('pointer-events-none', certUrl === '#');
+            docLink.classList.toggle('opacity-50', docUrl === '#');
+            docLink.classList.toggle('pointer-events-none', docUrl === '#');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
