@@ -47,13 +47,28 @@
             border: 2px solid #f1f5f9;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            padding: 1.5rem 1rem;
         }
 
         .company-btn.active {
             border-color: var(--accent-gold);
             background-color: #fffaf0;
             box-shadow: 0 10px 15px -3px rgba(192, 161, 80, 0.2);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+        }
+
+        .company-logo-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .company-btn:hover .company-logo-container {
+            transform: scale(1.1);
         }
 
         .select-custom {
@@ -108,11 +123,12 @@
         <div class="container mx-auto flex justify-between items-center px-4">
             <div class="flex items-center gap-4">
                 <div class="bg-white p-2 rounded-xl">
-                    <img src="LogoWajaya.png" alt="Logo" class="h-10 w-auto object-contain" onerror="this.src='https://ui-avatars.com/api/?name=WJL&background=002B5B&color=fff&bold=true'">
+                    <img id="mainLogo" src="LogoWajaya.png" alt="Logo" class="h-10 w-auto object-contain transition-all duration-500" onerror="this.src='https://ui-avatars.com/api/?name=WJL&background=002B5B&color=fff&bold=true'">
                 </div>
                 <div>
-                    <span class="font-extrabold text-xl md:text-2xl block leading-tight text-accent">KOPERASI WAHANA JALA REKADAYA</span>
-                    <span class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-blue-200 opacity-80">Kota Jakarta Barat, DKI Jakarta</span>
+                    <span id="navCompanyName" class="font-extrabold text-xl md:text-2xl block leading-tight text-accent">KOPERASI WAHANA JALA REKADAYA</span>
+                    <!-- Alamat ini akan berubah secara dinamis melalui JavaScript -->
+                    <span id="navCompanyAddress" class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-blue-200 opacity-80">Kota Jakarta Barat, DKI Jakarta</span>
                 </div>
             </div>
             <div class="hidden md:block">
@@ -142,15 +158,15 @@
 
     <!-- Navigation Controls -->
     <div class="container mx-auto px-4 relative z-20 controls-container">
-        <div class="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 border border-gray-100">
+        <div class="max-w-6xl mx-auto bg-white rounded-[2rem] shadow-2xl p-6 md:p-10 border border-gray-100">
             
-            <!-- Step 1: Select PT (Buttons) -->
-            <div class="mb-8">
-                <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-4 ml-1 flex items-center gap-2">
+            <!-- Step 1: Select PT (Buttons with Larger Logos) -->
+            <div class="mb-10">
+                <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-6 ml-1 flex items-center gap-2">
                     <i class="fas fa-building text-accent"></i> Pilih Perusahaan (PT)
                 </label>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="companyGrid">
-                    <!-- PT Buttons will be injected here -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="companyGrid">
+                    <!-- PT Buttons will be injected here via JS -->
                 </div>
             </div>
 
@@ -233,11 +249,36 @@
     </footer>
 
     <script>
+        // Data Perusahaan dengan alamat spesifik
         const companies = [
-            { id: 'pt-alb', name: 'PT ALHADII LAMPUNG BERJAYA', ships: ['amarisa'] },
-            { id: 'pt-nbc', name: 'PT NAUFAL BROTHERS COMPANY', ships: ['amadea', 'nitya'] },
-            { id: 'pt-stl', name: 'PT SURYA TIMUR LINE', ships: ['rishel', 'zoey', 'eirene'] },
-            { id: 'pt-tri', name: 'PT TRANSHIP INDONESIA', ships: ['tranship-i'] }
+            { 
+                id: 'pt-alb', 
+                name: 'PT ALHADII LAMPUNG BERJAYA', 
+                address: '', // Ubah alamat di sini
+                logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo1-1.png',
+                ships: ['amarisa'] 
+            },
+            { 
+                id: 'pt-nbc', 
+                name: 'PT NAUFAL BROTHERS COMPANY', 
+                address: '', // Ubah alamat di sini
+                logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo2-1.png',
+                ships: ['amadea', 'nitya'] 
+            },
+            { 
+                id: 'pt-stl', 
+                name: 'PT SURYA TIMUR LINE', 
+                address: '', // Ubah alamat di sini
+                logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo4-1.png',
+                ships: ['rishel', 'zoey', 'eirene'] 
+            },
+            { 
+                id: 'pt-tri', 
+                name: 'PT TRANSHIP INDONESIA', 
+                address: '', // Ubah alamat di sini
+                logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo3-1.png',
+                ships: ['tranship-i'] 
+            }
         ];
 
         const defaultServices = [
@@ -256,6 +297,7 @@
             'rishel': { name: 'KMP RISHEL', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
             'zoey': {
                 name: 'KMP ZOEY',
+                pt: 'PT SURYA TIMUR LINE',
                 type: 'Ro-Ro Passenger Ship',
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmKTCGWe8u1u0HS8ZCZUx755H04KPjHSycIA&s', 
                 history: {
@@ -312,14 +354,17 @@
             const grid = document.getElementById('companyGrid');
             companies.forEach(company => {
                 const btn = document.createElement('button');
-                btn.className = 'company-btn p-4 rounded-2xl flex flex-col items-center text-center gap-2 group';
+                btn.className = 'company-btn rounded-3xl flex flex-col items-center group shadow-sm';
                 btn.id = `btn-${company.id}`;
                 btn.onclick = () => selectCompany(company.id);
                 btn.innerHTML = `
-                    <div class="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-primary-blue transition-colors group-hover:bg-blue-50">
-                        <i class="fas fa-building text-sm"></i>
+                    <div class="company-logo-container">
+                        <img src="${company.logo}" class="max-h-full max-w-[85%] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=${company.id}&background=002B5B&color=fff'">
                     </div>
-                    <span class="font-extrabold text-m md:text-l block leading-tight text-accent uppercase">${company.name}</span>
+                    <span class="font-black text-[9px] md:text-[10px] block leading-tight text-gray-400 group-hover:text-primary-blue transition-colors uppercase tracking-widest text-center px-2">
+                        ${company.name}
+                    </span>
                 `;
                 grid.appendChild(btn);
             });
@@ -327,14 +372,31 @@
 
         function selectCompany(compId) {
             selectedPT = compId;
-            // UI Feedback
-            document.querySelectorAll('.company-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(`btn-${compId}`).classList.add('active');
-
-            // Reset and Enable Ship Selector
-            const shipSelector = document.getElementById('shipSelector');
             const company = companies.find(c => c.id === compId);
+
+            // 1. UPDATE LOGO, NAMA, DAN ALAMAT DI NAVBAR
+            const mainLogo = document.getElementById('mainLogo');
+            const navName = document.getElementById('navCompanyName');
+            const navAddress = document.getElementById('navCompanyAddress'); // Target elemen alamat
             
+            mainLogo.src = company.logo;
+            navName.innerText = company.name;
+            navAddress.innerText = company.address; // Mengubah alamat sesuai data PT
+
+            // 2. UI Feedback Tombol Aktif
+            document.querySelectorAll('.company-btn').forEach(b => {
+                b.classList.remove('active');
+                b.querySelector('img').classList.add('grayscale');
+                b.querySelector('span').classList.replace('text-primary-blue', 'text-gray-400');
+            });
+
+            const activeBtn = document.getElementById(`btn-${compId}`);
+            activeBtn.classList.add('active');
+            activeBtn.querySelector('img').classList.remove('grayscale');
+            activeBtn.querySelector('span').classList.replace('text-gray-400', 'text-primary-blue');
+
+            // 3. Reset dan Enable Ship Selector
+            const shipSelector = document.getElementById('shipSelector');
             shipSelector.innerHTML = '<option value="">-- Pilih Nama Kapal --</option>';
             company.ships.forEach(sId => {
                 const opt = document.createElement('option');
