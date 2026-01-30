@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Hub - PT Surya Timur Line</title>
+    <title>Maintenance Hub - Surya Timur Line Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -23,18 +23,15 @@
             position: relative;
             background-color: var(--primary-blue);
             overflow: hidden;
-            min-height: 450px;
+            min-height: 400px;
             display: flex;
             align-items: center;
         }
 
         .hero-bg-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(rgba(0, 43, 91, 0.6), rgba(0, 43, 91, 0.7)), 
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 43, 91, 0.7), rgba(0, 43, 91, 0.8)), 
                               url('https://suryatimurline.com/wp-content/uploads/2024/03/Mask-groupa.jpeg');
             background-size: cover;
             background-position: center;
@@ -42,14 +39,22 @@
             z-index: 1;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            padding: 60px 0;
-        }
-        
+        .hero-content { position: relative; z-index: 2; width: 100%; padding: 40px 0; }
         .transition-smooth { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .company-btn {
+            background: white;
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .company-btn.active {
+            border-color: var(--accent-gold);
+            background-color: #fffaf0;
+            box-shadow: 0 10px 15px -3px rgba(192, 161, 80, 0.2);
+            transform: translateY(-2px);
+        }
 
         .select-custom {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -64,8 +69,6 @@
         .service-card {
             border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
             background: white;
             min-height: 220px;
         }
@@ -77,63 +80,35 @@
         }
 
         .btn-action {
-            font-size: 10px;
-            font-weight: 800;
-            padding: 12px 6px;
-            border-radius: 10px;
-            transition: all 0.2s;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            width: 100%;
+            font-size: 10px; font-weight: 800; padding: 12px 6px;
+            border-radius: 10px; transition: all 0.2s;
+            text-align: center; display: flex; align-items: center;
+            justify-content: center; gap: 6px; width: 100%;
         }
 
         .item-dropdown {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 12px;
-            border-radius: 10px;
-            border: 2px solid #f1f5f9;
-            background-color: #f8fafc;
-            width: 100%;
-            margin-bottom: 15px;
-            cursor: pointer;
-            outline: none;
-            color: var(--primary-blue);
+            font-size: 11px; font-weight: 700; padding: 10px;
+            border-radius: 10px; border: 2px solid #f1f5f9;
+            background-color: #f8fafc; width: 100%; margin-bottom: 12px;
+            cursor: pointer; color: var(--primary-blue);
         }
 
-        .logo-img {
-            max-height: 45px; 
-            width: auto;
-            object-fit: contain;
-        }
-
-        /* Penyesuaian khusus untuk posisi tengah */
-        .controls-container {
-            margin-top: -120px; /* Menarik container ke atas area hero */
-        }
-
-        /* Penyesuaian khusus untuk teks menu maintenance */
         .maintenance-title {
-            font-size: 16px; /* Ukuran diperbesar */
-            font-weight: 800;
-            color: #800000; /* Warna Merah Maroon */
-            text-transform: uppercase;
-            letter-spacing: 0.025em;
-            line-height: 1.2;
+            font-size: 14px; font-weight: 800; color: #800000;
+            text-transform: uppercase; letter-spacing: 0.025em; line-height: 1.2;
         }
+
+        .controls-container { margin-top: -80px; }
     </style>
 </head>
 <body class="bg-[#F8FAFC] text-gray-900">
 
     <!-- Header / Navbar -->
-    <nav class="bg-primary text-white p-4 sticky top-0 z-50 shadow-xl border-b border-white/10">
+    <nav class="bg-primary text-white p-4 sticky top-0 z-50 shadow-xl">
         <div class="container mx-auto flex justify-between items-center px-4">
             <div class="flex items-center gap-4">
-                <div class="bg-white p-2 rounded-xl shadow-md">
-                    <img src="LogoWajaya.png" alt="Logo Koperasi Wajaya" class="logo-img" onerror="this.src='https://ui-avatars.com/api/?name=WJL&background=002B5B&color=fff&bold=true'">
+                <div class="bg-white p-2 rounded-xl">
+                    <img src="LogoWajaya.png" alt="Logo" class="h-10 w-auto object-contain" onerror="this.src='https://ui-avatars.com/api/?name=WJL&background=002B5B&color=fff&bold=true'">
                 </div>
                 <div>
                     <span class="font-extrabold text-xl md:text-2xl block leading-tight text-accent">KOPERASI WAHANA JALA REKADAYA</span>
@@ -141,8 +116,8 @@
                 </div>
             </div>
             <div class="hidden md:block">
-                <a href="https://https://suryatimurline.com/" target="_blank" class="text-xs font-bold px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10 transition-all">
-                    <i class="fas fa-globe mr-2"></i>Official Website PT Surya Timur Line
+                <a href="https://suryatimurline.com/" target="_blank" class="text-xs font-bold px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10 transition-all">
+                    <i class="fas fa-globe mr-2"></i>Official Website Surya Timur Line Group
                 </a>
             </div>
         </div>
@@ -151,13 +126,13 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-bg-overlay"></div>
-        <div class="hero-content flex flex-col items-center justify-center text-center text-white px-4">
-            <div class="max-w-4xl">
+        <div class="hero-content text-center text-white px-4">
+            <div class="max-w-4xl mx-auto">
                 <div class="inline-flex items-center gap-2 px-5 py-2 bg-accent-gold/20 border border-accent/40 text-accent rounded-full text-xs font-black mb-8 uppercase tracking-widest shadow-lg backdrop-blur-md">
                     <span class="flex h-2 w-2 rounded-full bg-accent-gold animate-ping"></span>
                     Maintenance Record Portal
                 </div>
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tighter drop-shadow-xl">PT Surya Timur Line</h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tighter drop-shadow-xl">Surya Timur Line Group</h2>
                 <p class="text-blue-50 text-base md:text-lg max-w-2xl mx-auto opacity-95 leading-relaxed font-medium mb-12">
                     Akses digital terpusat untuk sertifikasi sistem keselamatan dan dokumentasi teknis armada.
                 </p>
@@ -165,52 +140,60 @@
         </div>
     </section>
 
-    <!-- Selection Controls (Diposisikan di tengah) -->
+    <!-- Navigation Controls -->
     <div class="container mx-auto px-4 relative z-20 controls-container">
-        <div class="max-w-3xl mx-auto bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-10 border border-gray-100">
-            <div class="grid md:grid-cols-2 gap-8 items-end">
-                <!-- Ship Selector -->
+        <div class="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 border border-gray-100">
+            
+            <!-- Step 1: Select PT (Buttons) -->
+            <div class="mb-8">
+                <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-4 ml-1 flex items-center gap-2">
+                    <i class="fas fa-building text-accent"></i> Pilih Perusahaan (PT)
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="companyGrid">
+                    <!-- PT Buttons will be injected here -->
+                </div>
+            </div>
+
+            <!-- Step 2: Select Ship & Year -->
+            <div id="shipSelectionArea" class="grid md:grid-cols-2 gap-6 items-end opacity-40 pointer-events-none transition-smooth">
                 <div class="flex flex-col">
                     <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-3 ml-1 flex items-center gap-2">
                         <i class="fas fa-ship text-accent"></i> Pilih Armada Kapal
                     </label>
-                    <select id="shipSelector" onchange="handleShipChange()" class="select-custom w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-blue-500 transition-all font-bold text-primary-blue text-md">
-                        <option value="">-- Pilih Nama Kapal --</option>
+                    <select id="shipSelector" onchange="handleShipChange()" class="select-custom w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-blue-500 transition-all font-bold text-primary-blue">
+                        <option value="">Pilih Perusahaan Dahulu</option>
                     </select>
                 </div>
-                <!-- Year Selector -->
                 <div id="yearContainer" class="flex flex-col opacity-40 pointer-events-none transition-smooth">
                     <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[11px] mb-3 ml-1 flex items-center gap-2">
                         <i class="fas fa-calendar-alt text-accent"></i> Pilih Tahun Service
                     </label>
-                    <select id="yearSelector" onchange="updateShipPortal()" class="select-custom w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-blue-500 transition-all font-bold text-primary-blue text-md">
-                        <option value="">Pilih Kapal Terlebih Dahulu</option>
+                    <select id="yearSelector" onchange="updateShipPortal()" class="select-custom w-full p-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:outline-none focus:border-blue-500 transition-all font-bold text-primary-blue">
+                        <option value="">Pilih Kapal Dahulu</option>
                     </select>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Content (Portal Display) -->
+    <!-- Main Content -->
     <main class="py-12 container mx-auto px-4">
-        
-        <!-- Portal Display Area -->
         <div id="portalDisplay" class="hidden transition-smooth opacity-0 translate-y-8 max-w-6xl mx-auto">
-            <div class="grid lg:grid-cols-4 gap-10">
-                <!-- Ship Profile Card -->
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Profile -->
                 <div class="lg:col-span-1">
                     <div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-xl sticky top-28">
                         <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                            <img id="shipImage" src="" alt="Kapal" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <img id="shipImage" src="" alt="Ship" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         </div>
                         <div class="p-6 text-center">
-                            <p id="shipType" class="text-accent text-[9px] font-black uppercase tracking-[0.2em] mb-1">Tipe Kapal</p>
-                            <h3 id="shipNameDisplay" class="text-xl font-extrabold text-primary-blue uppercase leading-tight mb-3">Nama Kapal</h3>
-                            <div id="displayYear" class="text-[11px] font-black text-blue-600 mb-5 bg-blue-50 inline-block px-4 py-1.5 rounded-full uppercase tracking-tighter">
+                            <p id="shipPT" class="text-accent text-[9px] font-black uppercase tracking-[0.2em] mb-1">PT Nama Perusahaan</p>
+                            <h3 id="shipNameDisplay" class="text-xl font-extrabold text-primary-blue uppercase leading-tight mb-2">Nama Kapal</h3>
+                            <p id="shipType" class="text-[10px] font-bold text-gray-400 mb-4 italic">Ro-Ro Passenger Ship</p>
+                            <div id="displayYear" class="text-[11px] font-black text-blue-600 mb-4 bg-blue-50 inline-block px-4 py-1.5 rounded-full uppercase tracking-tighter">
                                 Tahun 2025
                             </div>
-                            
                             <div class="pt-5 border-t border-gray-100">
                                 <span class="inline-flex items-center px-4 py-2 rounded-xl bg-green-50 text-green-600 text-[10px] font-bold">
                                     <i class="fas fa-check-circle mr-2"></i> DATA TERVERIFIKASI
@@ -219,29 +202,25 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Records Grid -->
+                <!-- Docs -->
                 <div class="lg:col-span-3">
-                    <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm">
-                        <div class="flex items-center justify-between mb-8">
-                            <h4 class="text-xs font-black text-primary-blue uppercase tracking-[0.2em] flex items-center gap-3">
-                                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                                Maintenance Documents
-                            </h4>
-                        </div>
-                        <div id="certificateGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+                    <div class="bg-white rounded-[2rem] p-6 md:p-8 border border-gray-100 shadow-sm">
+                        <h4 class="text-xs font-black text-primary-blue uppercase tracking-[0.2em] flex items-center gap-3 mb-8">
+                            <span class="w-8 h-1 bg-accent rounded-full"></span>
+                            Maintenance Documents
+                        </h4>
+                        <div id="certificateGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Empty State -->
-        <div id="emptyState" class="text-center py-20 transition-smooth max-w-xl mx-auto">
-            <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
-                <i class="fas fa-anchor text-4xl text-blue-200"></i>
+        <div id="emptyState" class="text-center py-20 max-w-xl mx-auto">
+            <div class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-6 rotate-3">
+                <i class="fas fa-file-signature text-3xl text-blue-200"></i>
             </div>
-            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-[0.3em]">Menunggu pemilihan armada kapal</h3>
-            <p class="text-gray-400 text-xs mt-2">Silakan pilih kapal dan tahun untuk melihat catatan pemeliharaan.</p>
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em]">Silakan pilih data armada</h3>
+            <p class="text-gray-400 text-[11px] mt-2">Pilih Perusahaan, Kapal, dan Tahun untuk memuat dokumen.</p>
         </div>
     </main>
 
@@ -254,6 +233,13 @@
     </footer>
 
     <script>
+        const companies = [
+            { id: 'pt-alb', name: 'PT ALHADII LAMPUNG BERJAYA', ships: ['amarisa'] },
+            { id: 'pt-nbc', name: 'PT NAUFAL BROTHERS COMPANY', ships: ['amadea', 'nitya'] },
+            { id: 'pt-stl', name: 'PT SURYA TIMUR LINE', ships: ['rishel', 'zoey', 'eirene'] },
+            { id: 'pt-tri', name: 'PT TRANSHIP INDONESIA', ships: ['tranship-i'] }
+        ];
+
         const defaultServices = [
             { category: 'CO2 System', cert: '#', doc: '#', icon: 'fas fa-wind' },
             { category: 'EEBD', cert: '#', doc: '#', icon: 'fas fa-mask' },
@@ -264,14 +250,10 @@
         ];
 
         const fleetData = {
-            'rishel': {
-                name: 'KMP RISHEL',
-                type: 'Ro-Ro Passenger Ship',
-                image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg',
-                history: {
-                    '2025': [...defaultServices]
-                }
-            },
+            'amarisa': { name: 'KMP AMARISA', pt: 'PT ALHADII LAMPUNG BERJAYA', type: 'Ro-Ro Passenger Ship', image: 'https://www.shipspotting.com/photos/big/4/9/8/3874894.jpg?cb=0', history: { '2025': [...defaultServices] }},
+            'amadea': { name: 'KMP AMADEA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/BOgi-FnE8l4/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
+            'nitya': { name: 'KMP NITYA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://static.vesselfinder.net/ship-photo/1071484-525801319-2a104b0fa533d4f324add4219f9418a0/1?v1', history: { '2025': [...defaultServices] }},
+            'rishel': { name: 'KMP RISHEL', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
             'zoey': {
                 name: 'KMP ZOEY',
                 type: 'Ro-Ro Passenger Ship',
@@ -320,39 +302,66 @@
                     ]
                 }
             },
-            'eirene': { 
-                name: 'KMP EIRENE', 
-                type: 'Ro-Ro Passenger Ship', 
-                image: 'https://static.vesselfinder.net/ship-photo/1047639-525701487-0f10aba875d56a11d3830a9b890f9353/1?v1', 
-                history: { '2025': [...defaultServices] }
-            }
+            'eirene': { name: 'KMP EIRENE', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://static.vesselfinder.net/ship-photo/1047639-525701487-0f10aba875d56a11d3830a9b890f9353/1?v1', history: { '2025': [...defaultServices] }},
+            'tranship-i': { name: 'KMP TRANSHIP I', pt: 'PT TRANSHIP INDONESIA', type: 'Ro-Ro Passenger Ship', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtFzeGV-78Dum9zR9jjAqrrSVt0yXAjHSumw&s', history: { '2025': [...defaultServices] }}
         };
 
+        let selectedPT = null;
+
         function init() {
-            const selector = document.getElementById('shipSelector');
-            Object.keys(fleetData).sort((a,b) => fleetData[a].name.localeCompare(fleetData[b].name)).forEach(key => {
-                let option = document.createElement('option');
-                option.value = key;
-                option.text = fleetData[key].name;
-                selector.appendChild(option);
+            const grid = document.getElementById('companyGrid');
+            companies.forEach(company => {
+                const btn = document.createElement('button');
+                btn.className = 'company-btn p-4 rounded-2xl flex flex-col items-center text-center gap-2 group';
+                btn.id = `btn-${company.id}`;
+                btn.onclick = () => selectCompany(company.id);
+                btn.innerHTML = `
+                    <div class="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-primary-blue transition-colors group-hover:bg-blue-50">
+                        <i class="fas fa-building text-sm"></i>
+                    </div>
+                    <span class="font-extrabold text-m md:text-l block leading-tight text-accent uppercase">${company.name}</span>
+                `;
+                grid.appendChild(btn);
             });
+        }
+
+        function selectCompany(compId) {
+            selectedPT = compId;
+            // UI Feedback
+            document.querySelectorAll('.company-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`btn-${compId}`).classList.add('active');
+
+            // Reset and Enable Ship Selector
+            const shipSelector = document.getElementById('shipSelector');
+            const company = companies.find(c => c.id === compId);
+            
+            shipSelector.innerHTML = '<option value="">-- Pilih Nama Kapal --</option>';
+            company.ships.forEach(sId => {
+                const opt = document.createElement('option');
+                opt.value = sId;
+                opt.text = fleetData[sId].name;
+                shipSelector.appendChild(opt);
+            });
+
+            const shipArea = document.getElementById('shipSelectionArea');
+            shipArea.classList.remove('opacity-40', 'pointer-events-none');
+            
+            // Clear current portal
+            document.getElementById('portalDisplay').classList.add('hidden');
+            document.getElementById('emptyState').classList.remove('hidden');
+            document.getElementById('yearContainer').classList.add('opacity-40', 'pointer-events-none');
         }
 
         function handleShipChange() {
             const shipId = document.getElementById('shipSelector').value;
             const yearContainer = document.getElementById('yearContainer');
             const yearSelector = document.getElementById('yearSelector');
-            const portal = document.getElementById('portalDisplay');
-            const emptyState = document.getElementById('emptyState');
 
             if (!shipId) {
                 yearContainer.classList.add('opacity-40', 'pointer-events-none');
-                portal.classList.add('hidden');
-                emptyState.classList.remove('hidden');
                 return;
             }
 
-            // Populate Years
             const years = Object.keys(fleetData[shipId].history).sort((a, b) => b - a);
             yearSelector.innerHTML = years.map(yr => `<option value="${yr}">Tahun Service ${yr}</option>`).join('');
             
@@ -364,7 +373,6 @@
             const shipId = document.getElementById('shipSelector').value;
             const year = document.getElementById('yearSelector').value;
             const portal = document.getElementById('portalDisplay');
-            const emptyState = document.getElementById('emptyState');
             const grid = document.getElementById('certificateGrid');
 
             if (!shipId || !year) return;
@@ -373,15 +381,14 @@
             const records = shipData.history[year];
 
             grid.innerHTML = '';
-            
             records.forEach((item, index) => {
                 let cardHTML = '';
                 if (item.isMultiItem) {
                     const options = item.items.map(it => `<option value="${it.id}" data-cert="${it.cert || '#'}" data-doc="${it.doc || '#'}">ID: ${it.id}</option>`).join('');
                     cardHTML = `
-                        <div class="service-card rounded-2xl p-6 border-blue-50">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary-blue border border-blue-50 text-lg">
+                        <div class="service-card rounded-2xl p-5 border-blue-50">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary-blue border border-blue-100 text-lg">
                                     <i class="${item.icon}"></i>
                                 </div>
                                 <div>
@@ -390,24 +397,24 @@
                                 </div>
                             </div>
                             <select onchange="changeMultiItem(this, ${index})" class="item-dropdown">${options}</select>
-                            <div class="grid grid-cols-2 gap-3 mt-auto">
-                                <a id="cert-link-${index}" href="${item.items[0].cert || '#'}" target="_blank" class="btn-action bg-blue-600 text-white shadow-md shadow-blue-100 ${(!item.items[0].cert || item.items[0].cert === '#') ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-file-pdf"></i> SERTIFIKAT</a>
-                                <a id="doc-link-${index}" href="${item.items[0].doc || '#'}" target="_blank" class="btn-action bg-amber-500 text-white shadow-md shadow-amber-100 ${(!item.items[0].doc || item.items[0].doc === '#') ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-camera"></i> DOKUMEN</a>
+                            <div class="grid grid-cols-2 gap-2 mt-auto">
+                                <a id="cert-link-${index}" href="${item.items[0].cert || '#'}" target="_blank" class="btn-action bg-blue-600 text-white ${(!item.items[0].cert || item.items[0].cert === '#') ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-file-pdf"></i> SERTIFIKAT</a>
+                                <a id="doc-link-${index}" href="${item.items[0].doc || '#'}" target="_blank" class="btn-action bg-amber-500 text-white ${(!item.items[0].doc || item.items[0].doc === '#') ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-camera"></i> DOKUMEN</a>
                             </div>
                         </div>
                     `;
                 } else {
                     cardHTML = `
-                        <div class="service-card rounded-2xl p-6">
-                            <div class="flex items-center gap-4 mb-5">
+                        <div class="service-card rounded-2xl p-5">
+                            <div class="flex items-center gap-3 mb-8">
                                 <div class="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center text-primary-blue border border-gray-100 text-lg">
                                     <i class="${item.icon}"></i>
                                 </div>
                                 <h5 class="maintenance-title">${item.category}</h5>
                             </div>
-                            <div class="grid grid-cols-2 gap-3 mt-auto">
-                                <a href="${item.cert}" target="_blank" class="btn-action bg-blue-600 text-white shadow-md shadow-blue-100 ${item.cert === '#' ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-file-pdf"></i> SERTIFIKAT</a>
-                                <a href="${item.doc}" target="_blank" class="btn-action bg-amber-500 text-white shadow-md shadow-amber-100 ${item.doc === '#' ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-camera"></i> DOKUMEN</a>
+                            <div class="grid grid-cols-2 gap-2 mt-auto">
+                                <a href="${item.cert}" target="_blank" class="btn-action bg-blue-600 text-white ${item.cert === '#' ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-file-pdf"></i> SERTIFIKAT</a>
+                                <a href="${item.doc}" target="_blank" class="btn-action bg-amber-500 text-white ${item.doc === '#' ? 'opacity-50 pointer-events-none' : ''}"><i class="fas fa-camera"></i> DOKUMEN</a>
                             </div>
                         </div>
                     `;
@@ -415,12 +422,13 @@
                 grid.insertAdjacentHTML('beforeend', cardHTML);
             });
 
+            document.getElementById('shipPT').innerText = shipData.pt;
             document.getElementById('shipNameDisplay').innerText = shipData.name;
             document.getElementById('shipType').innerText = shipData.type;
             document.getElementById('shipImage').src = shipData.image;
             document.getElementById('displayYear').innerText = `Tahun Service ${year}`;
 
-            emptyState.classList.add('hidden');
+            document.getElementById('emptyState').classList.add('hidden');
             portal.classList.remove('hidden');
             setTimeout(() => {
                 portal.classList.remove('opacity-0', 'translate-y-8');
@@ -432,7 +440,6 @@
             const opt = selectElement.options[selectElement.selectedIndex];
             const certLink = document.getElementById(`cert-link-${index}`);
             const docLink = document.getElementById(`doc-link-${index}`);
-            
             const certUrl = opt.getAttribute('data-cert');
             const docUrl = opt.getAttribute('data-doc');
 
