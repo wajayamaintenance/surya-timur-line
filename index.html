@@ -127,7 +127,6 @@
                 </div>
                 <div>
                     <span id="navCompanyName" class="font-extrabold text-xl md:text-2xl block leading-tight text-accent">KOPERASI WAHANA JALA REKADAYA</span>
-                    <!-- Alamat ini akan berubah secara dinamis melalui JavaScript -->
                     <span id="navCompanyAddress" class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-blue-200 opacity-80">Kota Jakarta Barat, DKI Jakarta</span>
                 </div>
             </div>
@@ -160,13 +159,12 @@
     <div class="container mx-auto px-4 relative z-20 controls-container">
         <div class="max-w-6xl mx-auto bg-white rounded-[2rem] shadow-2xl p-6 md:p-10 border border-gray-100">
             
-            <!-- Step 1: Select PT (Buttons with Larger Logos) -->
+            <!-- Step 1: Select PT -->
             <div class="mb-10">
                 <label class="text-primary-blue font-extrabold uppercase tracking-widest text-[13px] mb-6 ml-1 flex items-center gap-2">
                     <i class="fas fa-building text-accent"></i> Pilih Perusahaan (PT)
                 </label>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="companyGrid">
-                    <!-- PT Buttons will be injected here via JS -->
                 </div>
             </div>
 
@@ -249,33 +247,32 @@
     </footer>
 
     <script>
-        // Data Perusahaan dengan alamat spesifik
         const companies = [
             { 
                 id: 'pt-alb', 
                 name: 'PT ALHADII LAMPUNG BERJAYA', 
-                address: '', // Ubah alamat di sini
+                address: '', 
                 logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo1-1.png',
                 ships: ['amarisa'] 
             },
             { 
                 id: 'pt-nbc', 
                 name: 'PT NAUFAL BROTHERS COMPANY', 
-                address: '', // Ubah alamat di sini
+                address: '', 
                 logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo2-1.png',
                 ships: ['amadea', 'nitya'] 
             },
             { 
                 id: 'pt-stl', 
                 name: 'PT SURYA TIMUR LINE', 
-                address: '', // Ubah alamat di sini
+                address: '', 
                 logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo4-1.png',
                 ships: ['rishel', 'zoey', 'eirene'] 
             },
             { 
                 id: 'pt-tri', 
                 name: 'PT TRANSHIP INDONESIA', 
-                address: '', // Ubah alamat di sini
+                address: '', 
                 logo: 'https://suryatimurline.com/wp-content/uploads/2024/03/logo3-1.png',
                 ships: ['tranship-i'] 
             }
@@ -287,7 +284,7 @@
             { category: 'APAR', cert: '#', doc: '#', icon: 'fas fa-fire-extinguisher' },
             { category: 'HRU', cert: '#', doc: '#', icon: 'fas fa-anchor' },
             { category: 'ILR', cert: '#', doc: '#', icon: 'fas fa-life-ring' },
-            { category: 'Sekoci', cert: '#', doc: '#', icon: 'fas fa-ship' }
+            { category: 'Lifeboat', cert: '#', doc: '#', icon: 'fas fa-ship' }
         ];
 
         const fleetData = {
@@ -341,6 +338,41 @@
                             { id: 'S50-17011', cert: 'https://drive.google.com/file/d/11T-E-LjirGmhSXVECCAJ0jfsDshw3V7M/view?usp=drive_link', doc: '' }
                             ] 
                         }
+                    ],
+                    '2026': [
+                        { category: 'CO2 System', cert: 'https://drive.google.com/file/d/167wMpmIdOvG2azPuvfLqRnnTa2DQ0oXt/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1fK853VsC1Py0wn_72yEwSqPkY-EkYIJQ?usp=sharing', icon: 'fas fa-wind' },
+                        { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1yxjvZoDwXbY-_d77trA2A37F5gXJ1nHQ/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1o1R3q07qGlKnugCLFRhxuNqoeGtAUVlj?usp=sharing', icon: 'fas fa-mask' },
+                        { category: 'Fire Extinguisher (APAR)', cert: 'https://drive.google.com/file/d/1cLQY02L0zGU2_x_aVQLlEuVz1o6UNOhL/view?usp=sharing', doc: 'https://drive.google.com/file/d/1GZY48yPXgXOUISAgmU_PqnnwqaY9IfJq/view?usp=sharing', icon: 'fas fa-fire-extinguisher'},
+                        { category: 'HRU', cert: 'https://drive.google.com/file/d/1xulCmSN5EAnNXScA5pGhYtpVsKgBP25y/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1VevB-_tSig3GOU7UJZKILJBmhKZWS094?usp=sharing', icon: 'fas fa-anchor' },
+                        { 
+                            category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
+                            items: [
+                                { id: '18308', cert: 'https://drive.google.com/file/d/14CIIoIxwLb2--sbEpM5ayD9tSEuzdqoK/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1A76fVgSOHCMok49BNRe1Ht-lStFJCyEw?usp=sharing' },
+                            { id: '18309', cert: 'https://drive.google.com/drive/folders/1UxUcydxhMmBZeKj7uCoGiuF_iqYRch2y?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1JaZCjll_fuXifIonywU_xxnvRw87vuTV?usp=sharing' },
+                            { id: '18310', cert: 'https://drive.google.com/file/d/1zp4APCFeF27KRwSz2SeiZaN4MIZB7jGB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1SMRJH9PJrkoraYAJ3jdB3nCtXiKujbMH?usp=drive_link' },
+                            { id: '18311', cert: 'https://drive.google.com/file/d/1EkoBwlwD6DQLJy0Ql5zb3BqMREGqUe0E/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1P7Hx68k_2eZbNjLQs5O4lviSHacjl-c3?usp=drive_link' },
+                            { id: '18312', cert: 'https://drive.google.com/file/d/1klgOQvXwSTh2VGpi6XtkRptHF1lrxX48/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1AGPVsELdB2ha2PJz0qG0VyUpwQqLC9z9?usp=drive_link' },
+                            { id: '18313', cert: 'https://drive.google.com/file/d/1yiDubaAJPGtv40negcPNQjuz7ArPL_99/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1nfwNs-owamhPhSbfazRAkvnL8K37R4YD?usp=drive_link' },
+                            { id: '18314', cert: 'https://drive.google.com/file/d/1VPE8A31SMl3PxXiCZM12orEM-XBnhCoX/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/17V-tCCama08bAsJxykUK9ad_71BPL8qN?usp=drive_link' },
+                            { id: '18315', cert: 'https://drive.google.com/file/d/1wBkciWZ8wzVNSEjvmpXjoEljLC0iCPvH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1qjupYrtoCfUOi2sFv8-chWh2Rt68-JNF?usp=drive_link' },
+                            { id: '18316', cert: 'https://drive.google.com/file/d/19YAdfD9IuYyOT5jo4Uf4T8XptJvxkTMB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1pABeDu-7Ypy1WZvOfHbBwva347Nd5Czx?usp=drive_link' },
+                            { id: '18317', cert: 'https://drive.google.com/file/d/1BheePqXXglyOkl2pt3fbTRiMuLgGK628/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1vzTanNuOB4Szk3uR7aBIxCTmOgM9xJO-?usp=drive_link' },
+                            { id: '18318', cert: 'https://drive.google.com/file/d/1SjfJPAkd6hgOmA2d-Q6cMEX41Q7KggNb/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1_FhuvOA5hQ3i4eAdkTqT8B3GY1lLbmGm?usp=drive_link' },
+                            { id: '18319', cert: 'https://drive.google.com/file/d/1WuA9mL2M1VqprahnXWPRP9Q2kV4hbFlF/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/13uckAvRfKA1wnKKyUCoLgeVx5OdDT8z9?usp=drive_link' },
+                            { id: '18320', cert: 'https://drive.google.com/file/d/1TR_ZzKbzvyjS6f3teqJra5OttNOQOR1V/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1Lzf6oTGm1sxhQL35qhXB542NHSnywz5Q?usp=drive_link' },
+                            { id: '18321', cert: 'https://drive.google.com/file/d/1Z35NhVZWMg9E8VejFrd_oMridNEf_9aV/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1V_lpMAaxXrrdS2KfY_XhjLFBz1ERP8Gk?usp=drive_link' },
+                            { id: '18322', cert: 'https://drive.google.com/file/d/1fZ2jBQeH-Livn20r4jLWDgqQfx_4w3qH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VnGErx-bvQ-_hE_7qfTwOZxP5HzJH6N2?usp=drive_link' },
+                            { id: '18336', cert: 'https://drive.google.com/file/d/13QMh11-fcAGGPuubeytoOcoC_UdQKIu2/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1aRuj6VMs3k3p89v08L8tDBmsoHHH01dJ?usp=drive_link' },
+                            { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1i7fg8XXLQau2fYt5ap14_tLKAQkW8jmU/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VdvTz9XI27a1AMT4Y99CF-UxJ_d4JzrM?usp=drive_link' },
+                            { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1_jXewJTF7Z_LJAH7IHcwYhOti0vXqi2N/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1T--UcOeRGc5QLsPcxUfYO5Ckug89N9D2?usp=drive_link' },
+                            { id: 'AA-250570', cert: 'https://drive.google.com/file/d/1QHtZAG9VSOGBJyzZarvdBbMX2A-ZS_JB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1mIS2tTiS-z8VbGRuhRyoOQ7SK3Yc7BQc?usp=drive_link' },
+                            { id: 'AA-250571', cert: 'https://drive.google.com/file/d/1lqqR4vNZyLXJbMdfWwnyKVTu00mocbrD/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1xGft8P4y9k_D2zoNfjDWb1xkhwBraWU7?usp=drive_link' },
+                            { id: 'S50-17010', cert: 'https://drive.google.com/file/d/1YFnyeao8gQq8DhUY0NiQEr8hQ52giPJk/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1FQbaAG9LRpEXKMw5OSKuKqVLnpp3MRSP?usp=drive_link' },
+                            { id: 'S50-17011', cert: 'https://drive.google.com/file/d/1_ANgXKRwkCiR6G0IgB3uwKTvY6E7J0Wg/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1DYsWcfUQ7pR8M082eAdZlVvPQwth_JMG?usp=drive_link' },
+                            { id: 'Proses Penurunan ILR', doc: 'https://drive.google.com/file/d/1CLmmtE1p1anlfxrFO-y2KosXxkGdNGrR/view?usp=sharing' }
+                            ] 
+                        },
+                        { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1vQW3hQ3j5l0LgC1fLf-fVsz6Wt0MDaPf/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/126jEHFzES29-L2qTdTnhl85nnh0ts__Z?usp=sharing', icon: 'fas fa-ship' }
                     ]
                 }
             },
@@ -374,16 +406,14 @@
             selectedPT = compId;
             const company = companies.find(c => c.id === compId);
 
-            // 1. UPDATE LOGO, NAMA, DAN ALAMAT DI NAVBAR
             const mainLogo = document.getElementById('mainLogo');
             const navName = document.getElementById('navCompanyName');
-            const navAddress = document.getElementById('navCompanyAddress'); // Target elemen alamat
+            const navAddress = document.getElementById('navCompanyAddress');
             
             mainLogo.src = company.logo;
             navName.innerText = company.name;
-            navAddress.innerText = company.address; // Mengubah alamat sesuai data PT
+            navAddress.innerText = company.address;
 
-            // 2. UI Feedback Tombol Aktif
             document.querySelectorAll('.company-btn').forEach(b => {
                 b.classList.remove('active');
                 b.querySelector('img').classList.add('grayscale');
@@ -395,7 +425,6 @@
             activeBtn.querySelector('img').classList.remove('grayscale');
             activeBtn.querySelector('span').classList.replace('text-gray-400', 'text-primary-blue');
 
-            // 3. Reset dan Enable Ship Selector
             const shipSelector = document.getElementById('shipSelector');
             shipSelector.innerHTML = '<option value="">-- Pilih Nama Kapal --</option>';
             company.ships.forEach(sId => {
@@ -408,7 +437,6 @@
             const shipArea = document.getElementById('shipSelectionArea');
             shipArea.classList.remove('opacity-40', 'pointer-events-none');
             
-            // Clear current portal
             document.getElementById('portalDisplay').classList.add('hidden');
             document.getElementById('emptyState').classList.remove('hidden');
             document.getElementById('yearContainer').classList.add('opacity-40', 'pointer-events-none');
