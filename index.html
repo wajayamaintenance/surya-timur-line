@@ -288,103 +288,143 @@
         ];
 
         const fleetData = {
-            'amarisa': { name: 'KMP AMARISA', pt: 'PT ALHADII LAMPUNG BERJAYA', type: 'Ro-Ro Passenger Ship', image: 'https://www.shipspotting.com/photos/big/4/9/8/3874894.jpg?cb=0', history: { '2025': [...defaultServices] }},
-            'amadea': { name: 'KMP AMADEA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/BOgi-FnE8l4/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
-            'nitya': { name: 'KMP NITYA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://static.vesselfinder.net/ship-photo/1071484-525801319-2a104b0fa533d4f324add4219f9418a0/1?v1', history: { '2025': [...defaultServices] }},
-            'rishel': { name: 'KMP RISHEL', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
-            'zoey': {
-                name: 'KMP ZOEY',
-                pt: 'PT SURYA TIMUR LINE',
-                type: 'Ro-Ro Passenger Ship',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmKTCGWe8u1u0HS8ZCZUx755H04KPjHSycIA&s', 
-                history: {
-                    '2025': [
-                        { category: 'CO2 System', cert: 'https://drive.google.com/file/d/19sKBeWYq0rCL9U1Qyl1vRFWk9Jc259Cp/view?usp=sharing', doc: '#', icon: 'fas fa-wind' },
-                        { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1h7j_eCbzldva28edZOivICnZP3FhLcHi/view?usp=sharing', doc: '#', icon: 'fas fa-mask' },
-                        { category: 'Fire Extinguisher (APAR)', icon: 'fas fa-fire-extinguisher', isMultiItem: true,
-                            items: [
-                            { id: 'APAR_DCS-FE.25.001', cert: 'https://drive.google.com/file/d/1xd2twTLYCC2Q7V0N1yjTCStMDusonMHk/view?usp=sharing', doc: '' },
-                            { id: 'APAR_DCS-FE.25.002', cert: 'https://drive.google.com/file/d/1dM79za_kTKOR1VXZSoLfOEsv2RTeE4qU/view?usp=sharing', doc: '' } ]
-                        },
-                        { category: 'HRU', icon: 'fas fa-anchor', isMultiItem: true, 
-                            items: [
-                            { id: 'HRU_1701892-1700731-17019891-1700745-1601842-1601847', cert: 'https://drive.google.com/file/d/1uggVs2du4TDnVqy6VvwtK1OV8oYAmeaU/view?usp=sharing', doc: '' },
-                            { id: 'HRU_1801175-1800238-1801170-1800247-1801172-1801169', cert: 'https://drive.google.com/file/d/1rOzC6pWcBvF6LQIBillZ8MlG3OmdQefC/view?usp=sharing', doc: '' } ]
-                        },
-                        { 
-                            category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
-                            items: [
-                                { id: '18308', cert: 'https://drive.google.com/file/d/1rhCI4zcEU6UyKICYcQC1qjekN1joXHmF/view?usp=sharing', doc: '' },
-                            { id: '18309', cert: 'https://drive.google.com/file/d/12_WZBmfpMKvtsoAKQ1d7HVFw2iLz_78c/view?usp=drive_link', doc: '' },
-                            { id: '18310', cert: 'https://drive.google.com/file/d/1VEstgp-X7Ocn8Ktj2E69u8h13PZtxVAw/view?usp=drive_link', doc: '' },
-                            { id: '18311', cert: 'https://drive.google.com/file/d/1BHHsC1vvsNkvCYQnxmCMUxP2HUAfC9Zq/view?usp=drive_link', doc: '' },
-                            { id: '18312', cert: 'https://drive.google.com/file/d/1X5Tt-nvbp5GjcKtaDkDo6-XKogH1SIMa/view?usp=drive_link', doc: '' },
-                            { id: '18313', cert: 'https://drive.google.com/file/d/1501Au10IC1Dlbeq_YMZjP5ToKSW2R7xa/view?usp=drive_link', doc: '' },
-                            { id: '18314', cert: 'https://drive.google.com/file/d/1bfsjQGgBwus7dK8rLlNHDHFr5yEvuMnq/view?usp=drive_link', doc: '' },
-                            { id: '18315', cert: 'https://drive.google.com/file/d/1CrwZZI8u2lVUqHe6YexdYYcbDpCOImUM/view?usp=drive_link', doc: '' },
-                            { id: '18316', cert: 'https://drive.google.com/file/d/1g-2NM8Y5Wt2_angDBQSSkdd1L_5WQp0U/view?usp=drive_link', doc: '' },
-                            { id: '18317', cert: 'https://drive.google.com/file/d/1d8k6L2ZXIxvq8FHWc58h767rKJ8Gd0F0/view?usp=drive_link', doc: '' },
-                            { id: '18318', cert: 'https://drive.google.com/file/d/1sbUUOsrtRQ-gz84H3jKB55aGPA6oUOK5/view?usp=drive_link', doc: '' },
-                            { id: '18319', cert: 'https://drive.google.com/file/d/1Rra8XJtbo4PFihCLWb5ygbmU3Vudbbv2/view?usp=drive_link', doc: '' },
-                            { id: '18320', cert: 'https://drive.google.com/file/d/1KR9U6NxFifNv6Y8e-dv_fy5GL8-iO9MH/view?usp=drive_link', doc: '' },
-                            { id: '18321', cert: 'https://drive.google.com/file/d/1sDnSbs8mi4lwlzBFkJO4SM6wSftNN9kC/view?usp=drive_link', doc: '' },
-                            { id: '18322', cert: 'https://drive.google.com/drive/folders/1VUDmdr1H5CUaQm6C_fPbOn1zDh0ROdAo?usp=drive_link', doc: '' },
-                            { id: '18336', cert: 'https://drive.google.com/file/d/1kQdM5JK8PPg1aq320vuRNGxLHtqADacF/view?usp=drive_link', doc: '' },
-                            { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1BRjjQIyFbliiZgO5QbhM6XEPS_a_3NL5/view?usp=drive_link', doc: '' },
-                            { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1GjPPAt5IGBOwweglUs2Ap79y1jZWnNcO/view?usp=drive_link', doc: '' },
-                            { id: 'AA-250570', cert: 'https://drive.google.com/file/d/13Q0S1MawOg8wmiinZ7TXiZU6SK_1LoNV/view?usp=drive_link', doc: 'AA-250547' },
-                            { id: 'AA-250571', cert: 'https://drive.google.com/file/d/19c7R-zTpuhfL6qT-ynolApLdufbNtDPO/view?usp=drive_link', doc: '' },
-                            { id: 'S50-17010', cert: 'https://drive.google.com/file/d/101hL0vMMAMsl2wMsdlVVn0CIqZ4Sh0Z0/view?usp=drive_link', doc: '' },
-                            { id: 'S50-17011', cert: 'https://drive.google.com/file/d/11T-E-LjirGmhSXVECCAJ0jfsDshw3V7M/view?usp=drive_link', doc: '' }
-                            ] 
-                        }
-                    ],
-                    
-                        { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1vQW3hQ3j5l0LgC1fLf-fVsz6Wt0MDaPf/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/126jEHFzES29-L2qTdTnhl85nnh0ts__Z?usp=sharing', icon: 'fas fa-ship' }
+    'amarisa': { name: 'KMP AMARISA', pt: 'PT ALHADII LAMPUNG BERJAYA', type: 'Ro-Ro Passenger Ship', image: 'https://www.shipspotting.com/photos/big/4/9/8/3874894.jpg?cb=0', history: { '2025': [...defaultServices] }},
+    'amadea': { name: 'KMP AMADEA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/BOgi-FnE8l4/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
+    'nitya': { name: 'KMP NITYA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://static.vesselfinder.net/ship-photo/1071484-525801319-2a104b0fa533d4f324add4219f9418a0/1?v1', history: { '2025': [...defaultServices] }},
+    'rishel': { name: 'KMP RISHEL', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
+    'zoey': {
+        name: 'KMP ZOEY',
+        pt: 'PT SURYA TIMUR LINE',
+        type: 'Ro-Ro Passenger Ship',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmKTCGWe8u1u0HS8ZCZUx755H04KPjHSycIA&s', 
+        history: {
+            '2025': [
+                { category: 'CO2 System', cert: 'https://drive.google.com/file/d/19sKBeWYq0rCL9U1Qyl1vRFWk9Jc259Cp/view?usp=sharing', doc: '#', icon: 'fas fa-wind' },
+                { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1h7j_eCbzldva28edZOivICnZP3FhLcHi/view?usp=sharing', doc: '#', icon: 'fas fa-mask' },
+                { category: 'Fire Extinguisher (APAR)', icon: 'fas fa-fire-extinguisher', isMultiItem: true,
+                    items: [
+                        { id: 'APAR_DCS-FE.25.001', cert: 'https://drive.google.com/file/d/1xd2twTLYCC2Q7V0N1yjTCStMDusonMHk/view?usp=sharing', doc: '' },
+                        { id: 'APAR_DCS-FE.25.002', cert: 'https://drive.google.com/file/d/1dM79za_kTKOR1VXZSoLfOEsv2RTeE4qU/view?usp=sharing', doc: '' } 
                     ]
-                }
-            }, 
-            'eirene': { name: 'KMP EIRENE', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://static.vesselfinder.net/ship-photo/1047639-525701487-0f10aba875d56a11d3830a9b890f9353/1?v1', history: { 
-            '2025': [...defaultServices] }},
+                },
+                { category: 'HRU', icon: 'fas fa-anchor', isMultiItem: true, 
+                    items: [
+                        { id: 'HRU_1701892-1700731-17019891-1700745-1601842-1601847', cert: 'https://drive.google.com/file/d/1uggVs2du4TDnVqy6VvwtK1OV8oYAmeaU/view?usp=sharing', doc: '' },
+                        { id: 'HRU_1801175-1800238-1801170-1800247-1801172-1801169', cert: 'https://drive.google.com/file/d/1rOzC6pWcBvF6LQIBillZ8MlG3OmdQefC/view?usp=sharing', doc: '' } 
+                    ]
+                },
+                { 
+                    category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
+                    items: [
+                        { id: '18308', cert: 'https://drive.google.com/file/d/1rhCI4zcEU6UyKICYcQC1qjekN1joXHmF/view?usp=sharing', doc: '' },
+                        { id: '18309', cert: 'https://drive.google.com/file/d/12_WZBmfpMKvtsoAKQ1d7HVFw2iLz_78c/view?usp=drive_link', doc: '' },
+                        { id: '18310', cert: 'https://drive.google.com/file/d/1VEstgp-X7Ocn8Ktj2E69u8h13PZtxVAw/view?usp=drive_link', doc: '' },
+                        { id: '18311', cert: 'https://drive.google.com/file/d/1BHHsC1vvsNkvCYQnxmCMUxP2HUAfC9Zq/view?usp=drive_link', doc: '' },
+                        { id: '18312', cert: 'https://drive.google.com/file/d/1X5Tt-nvbp5GjcKtaDkDo6-XKogH1SIMa/view?usp=drive_link', doc: '' },
+                        { id: '18313', cert: 'https://drive.google.com/file/d/1501Au10IC1Dlbeq_YMZjP5ToKSW2R7xa/view?usp=drive_link', doc: '' },
+                        { id: '18314', cert: 'https://drive.google.com/file/d/1bfsjQGgBwus7dK8rLlNHDHFr5yEvuMnq/view?usp=drive_link', doc: '' },
+                        { id: '18315', cert: 'https://drive.google.com/file/d/1CrwZZI8u2lVUqHe6YexdYYcbDpCOImUM/view?usp=drive_link', doc: '' },
+                        { id: '18316', cert: 'https://drive.google.com/file/d/1g-2NM8Y5Wt2_angDBQSSkdd1L_5WQp0U/view?usp=drive_link', doc: '' },
+                        { id: '18317', cert: 'https://drive.google.com/file/d/1d8k6L2ZXIxvq8FHWc58h767rKJ8Gd0F0/view?usp=drive_link', doc: '' },
+                        { id: '18318', cert: 'https://drive.google.com/file/d/1sbUUOsrtRQ-gz84H3jKB55aGPA6oUOK5/view?usp=drive_link', doc: '' },
+                        { id: '18319', cert: 'https://drive.google.com/file/d/1Rra8XJtbo4PFihCLWb5ygbmU3Vudbbv2/view?usp=drive_link', doc: '' },
+                        { id: '18320', cert: 'https://drive.google.com/file/d/1KR9U6NxFifNv6Y8e-dv_fy5GL8-iO9MH/view?usp=drive_link', doc: '' },
+                        { id: '18321', cert: 'https://drive.google.com/file/d/1sDnSbs8mi4lwlzBFkJO4SM6wSftNN9kC/view?usp=drive_link', doc: '' },
+                        { id: '18322', cert: 'https://drive.google.com/drive/folders/1VUDmdr1H5CUaQm6C_fPbOn1zDh0ROdAo?usp=drive_link', doc: '' },
+                        { id: '18336', cert: 'https://drive.google.com/file/d/1kQdM5JK8PPg1aq320vuRNGxLHtqADacF/view?usp=drive_link', doc: '' },
+                        { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1BRjjQIyFbliiZgO5QbhM6XEPS_a_3NL5/view?usp=drive_link', doc: '' },
+                        { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1GjPPAt5IGBOwweglUs2Ap79y1jZWnNcO/view?usp=drive_link', doc: '' },
+                        { id: 'AA-250570', cert: 'https://drive.google.com/file/d/13Q0S1MawOg8wmiinZ7TXiZU6SK_1LoNV/view?usp=drive_link', doc: 'AA-250547' },
+                        { id: 'AA-250571', cert: 'https://drive.google.com/file/d/19c7R-zTpuhfL6qT-ynolApLdufbNtDPO/view?usp=drive_link', doc: '' },
+                        { id: 'S50-17010', cert: 'https://drive.google.com/file/d/101hL0vMMAMsl2wMsdlVVn0CIqZ4Sh0Z0/view?usp=drive_link', doc: '' },
+                        { id: 'S50-17011', cert: 'https://drive.google.com/file/d/11T-E-LjirGmhSXVECCAJ0jfsDshw3V7M/view?usp=drive_link', doc: '' }
+                    ] 
+                },
+                { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1vQW3hQ3j5l0LgC1fLf-fVsz6Wt0MDaPf/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/126jEHFzES29-L2qTdTnhl85nnh0ts__Z?usp=sharing', icon: 'fas fa-ship' }
+            ], // <-- Posisi kurung penutup array zoey yang benar
             '2026': [
-                        { category: 'CO2 System', cert: 'https://drive.google.com/file/d/167wMpmIdOvG2azPuvfLqRnnTa2DQ0oXt/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1fK853VsC1Py0wn_72yEwSqPkY-EkYIJQ?usp=sharing', icon: 'fas fa-wind' },
-                        { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1yxjvZoDwXbY-_d77trA2A37F5gXJ1nHQ/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1o1R3q07qGlKnugCLFRhxuNqoeGtAUVlj?usp=sharing', icon: 'fas fa-mask' },
-                        { category: 'Fire Extinguisher (APAR)', cert: 'https://drive.google.com/file/d/1cLQY02L0zGU2_x_aVQLlEuVz1o6UNOhL/view?usp=sharing', doc: 'https://drive.google.com/file/d/1GZY48yPXgXOUISAgmU_PqnnwqaY9IfJq/view?usp=sharing', icon: 'fas fa-fire-extinguisher'},
-                        { category: 'HRU', cert: 'https://drive.google.com/file/d/1xulCmSN5EAnNXScA5pGhYtpVsKgBP25y/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1VevB-_tSig3GOU7UJZKILJBmhKZWS094?usp=sharing', icon: 'fas fa-anchor' },
-                        { 
-                            category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
-                            items: [
-                                { id: '18308', cert: 'https://drive.google.com/file/d/14CIIoIxwLb2--sbEpM5ayD9tSEuzdqoK/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1A76fVgSOHCMok49BNRe1Ht-lStFJCyEw?usp=sharing' },
-                            { id: '18309', cert: 'https://drive.google.com/drive/folders/1UxUcydxhMmBZeKj7uCoGiuF_iqYRch2y?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1JaZCjll_fuXifIonywU_xxnvRw87vuTV?usp=sharing' },
-                            { id: '18310', cert: 'https://drive.google.com/file/d/1zp4APCFeF27KRwSz2SeiZaN4MIZB7jGB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1SMRJH9PJrkoraYAJ3jdB3nCtXiKujbMH?usp=drive_link' },
-                            { id: '18311', cert: 'https://drive.google.com/file/d/1EkoBwlwD6DQLJy0Ql5zb3BqMREGqUe0E/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1P7Hx68k_2eZbNjLQs5O4lviSHacjl-c3?usp=drive_link' },
-                            { id: '18312', cert: 'https://drive.google.com/file/d/1klgOQvXwSTh2VGpi6XtkRptHF1lrxX48/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1AGPVsELdB2ha2PJz0qG0VyUpwQqLC9z9?usp=drive_link' },
-                            { id: '18313', cert: 'https://drive.google.com/file/d/1yiDubaAJPGtv40negcPNQjuz7ArPL_99/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1nfwNs-owamhPhSbfazRAkvnL8K37R4YD?usp=drive_link' },
-                            { id: '18314', cert: 'https://drive.google.com/file/d/1VPE8A31SMl3PxXiCZM12orEM-XBnhCoX/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/17V-tCCama08bAsJxykUK9ad_71BPL8qN?usp=drive_link' },
-                            { id: '18315', cert: 'https://drive.google.com/file/d/1wBkciWZ8wzVNSEjvmpXjoEljLC0iCPvH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1qjupYrtoCfUOi2sFv8-chWh2Rt68-JNF?usp=drive_link' },
-                            { id: '18316', cert: 'https://drive.google.com/file/d/19YAdfD9IuYyOT5jo4Uf4T8XptJvxkTMB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1pABeDu-7Ypy1WZvOfHbBwva347Nd5Czx?usp=drive_link' },
-                            { id: '18317', cert: 'https://drive.google.com/file/d/1BheePqXXglyOkl2pt3fbTRiMuLgGK628/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1vzTanNuOB4Szk3uR7aBIxCTmOgM9xJO-?usp=drive_link' },
-                            { id: '18318', cert: 'https://drive.google.com/file/d/1SjfJPAkd6hgOmA2d-Q6cMEX41Q7KggNb/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1_FhuvOA5hQ3i4eAdkTqT8B3GY1lLbmGm?usp=drive_link' },
-                            { id: '18319', cert: 'https://drive.google.com/file/d/1WuA9mL2M1VqprahnXWPRP9Q2kV4hbFlF/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/13uckAvRfKA1wnKKyUCoLgeVx5OdDT8z9?usp=drive_link' },
-                            { id: '18320', cert: 'https://drive.google.com/file/d/1TR_ZzKbzvyjS6f3teqJra5OttNOQOR1V/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1Lzf6oTGm1sxhQL35qhXB542NHSnywz5Q?usp=drive_link' },
-                            { id: '18321', cert: 'https://drive.google.com/file/d/1Z35NhVZWMg9E8VejFrd_oMridNEf_9aV/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1V_lpMAaxXrrdS2KfY_XhjLFBz1ERP8Gk?usp=drive_link' },
-                            { id: '18322', cert: 'https://drive.google.com/file/d/1fZ2jBQeH-Livn20r4jLWDgqQfx_4w3qH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VnGErx-bvQ-_hE_7qfTwOZxP5HzJH6N2?usp=drive_link' },
-                            { id: '18336', cert: 'https://drive.google.com/file/d/13QMh11-fcAGGPuubeytoOcoC_UdQKIu2/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1aRuj6VMs3k3p89v08L8tDBmsoHHH01dJ?usp=drive_link' },
-                            { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1i7fg8XXLQau2fYt5ap14_tLKAQkW8jmU/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VdvTz9XI27a1AMT4Y99CF-UxJ_d4JzrM?usp=drive_link' },
-                            { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1_jXewJTF7Z_LJAH7IHcwYhOti0vXqi2N/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1T--UcOeRGc5QLsPcxUfYO5Ckug89N9D2?usp=drive_link' },
-                            { id: 'AA-250570', cert: 'https://drive.google.com/file/d/1QHtZAG9VSOGBJyzZarvdBbMX2A-ZS_JB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1mIS2tTiS-z8VbGRuhRyoOQ7SK3Yc7BQc?usp=drive_link' },
-                            { id: 'AA-250571', cert: 'https://drive.google.com/file/d/1lqqR4vNZyLXJbMdfWwnyKVTu00mocbrD/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1xGft8P4y9k_D2zoNfjDWb1xkhwBraWU7?usp=drive_link' },
-                            { id: 'S50-17010', cert: 'https://drive.google.com/file/d/1YFnyeao8gQq8DhUY0NiQEr8hQ52giPJk/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1FQbaAG9LRpEXKMw5OSKuKqVLnpp3MRSP?usp=drive_link' },
-                            { id: 'S50-17011', cert: 'https://drive.google.com/file/d/1_ANgXKRwkCiR6G0IgB3uwKTvY6E7J0Wg/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1DYsWcfUQ7pR8M082eAdZlVvPQwth_JMG?usp=drive_link' },
-                            { id: 'Proses Penurunan ILR', doc: 'https://drive.google.com/file/d/1CLmmtE1p1anlfxrFO-y2KosXxkGdNGrR/view?usp=sharing' }
-                            ] 
-                        },
-                        { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1vQW3hQ3j5l0LgC1fLf-fVsz6Wt0MDaPf/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/126jEHFzES29-L2qTdTnhl85nnh0ts__Z?usp=sharing', icon: 'fas fa-ship' }
-                    ]
-                }
-            },
-            'tranship-i': { name: 'KMP TRANSHIP I', pt: 'PT TRANSHIP INDONESIA', type: 'Ro-Ro Passenger Ship', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtFzeGV-78Dum9zR9jjAqrrSVt0yXAjHSumw&s', history: { '2025': [...defaultServices] }}
-        };
+                { category: 'CO2 System', cert: 'https://drive.google.com/file/d/167wMpmIdOvG2azPuvfLqRnnTa2DQ0oXt/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1fK853VsC1Py0wn_72yEwSqPkY-EkYIJQ?usp=sharing', icon: 'fas fa-wind' },
+                { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1yxjvZoDwXbY-_d77trA2A37F5gXJ1nHQ/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1o1R3q07qGlKnugCLFRhxuNqoeGtAUVlj?usp=sharing', icon: 'fas fa-mask' },
+                { category: 'Fire Extinguisher (APAR)', cert: 'https://drive.google.com/file/d/1cLQY02L0zGU2_x_aVQLlEuVz1o6UNOhL/view?usp=sharing', doc: 'https://drive.google.com/file/d/1GZY48yPXgXOUISAgmU_PqnnwqaY9IfJq/view?usp=sharing', icon: 'fas fa-fire-extinguisher'},
+                { category: 'HRU', cert: 'https://drive.google.com/file/d/1xulCmSN5EAnNXScA5pGhYtpVsKgBP25y/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1VevB-_tSig3GOU7UJZKILJBmhKZWS094?usp=sharing', icon: 'fas fa-anchor' },
+                { 
+                    category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
+                    items: [
+                        { id: '18308', cert: 'https://drive.google.com/file/d/14CIIoIxwLb2--sbEpM5ayD9tSEuzdqoK/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1A76fVgSOHCMok49BNRe1Ht-lStFJCyEw?usp=sharing' },
+                        { id: '18309', cert: 'https://drive.google.com/drive/folders/1UxUcydxhMmBZeKj7uCoGiuF_iqYRch2y?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1JaZCjll_fuXifIonywU_xxnvRw87vuTV?usp=sharing' },
+                        { id: '18310', cert: 'https://drive.google.com/file/d/1zp4APCFeF27KRwSz2SeiZaN4MIZB7jGB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1SMRJH9PJrkoraYAJ3jdB3nCtXiKujbMH?usp=drive_link' },
+                        { id: '18311', cert: 'https://drive.google.com/file/d/1EkoBwlwD6DQLJy0Ql5zb3BqMREGqUe0E/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1P7Hx68k_2eZbNjLQs5O4lviSHacjl-c3?usp=drive_link' },
+                        { id: '18312', cert: 'https://drive.google.com/file/d/1klgOQvXwSTh2VGpi6XtkRptHF1lrxX48/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1AGPVsELdB2ha2PJz0qG0VyUpwQqLC9z9?usp=drive_link' },
+                        { id: '18313', cert: 'https://drive.google.com/file/d/1yiDubaAJPGtv40negcPNQjuz7ArPL_99/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1nfwNs-owamhPhSbfazRAkvnL8K37R4YD?usp=drive_link' },
+                        { id: '18314', cert: 'https://drive.google.com/file/d/1VPE8A31SMl3PxXiCZM12orEM-XBnhCoX/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/17V-tCCama08bAsJxykUK9ad_71BPL8qN?usp=drive_link' },
+                        { id: '18315', cert: 'https://drive.google.com/file/d/1wBkciWZ8wzVNSEjvmpXjoEljLC0iCPvH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1qjupYrtoCfUOi2sFv8-chWh2Rt68-JNF?usp=drive_link' },
+                        { id: '18316', cert: 'https://drive.google.com/file/d/19YAdfD9IuYyOT5jo4Uf4T8XptJvxkTMB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1pABeDu-7Ypy1WZvOfHbBwva347Nd5Czx?usp=drive_link' },
+                        { id: '18317', cert: 'https://drive.google.com/file/d/1BheePqXXglyOkl2pt3fbTRiMuLgGK628/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1vzTanNuOB4Szk3uR7aBIxCTmOgM9xJO-?usp=drive_link' },
+                        { id: '18318', cert: 'https://drive.google.com/file/d/1SjfJPAkd6hgOmA2d-Q6cMEX41Q7KggNb/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1_FhuvOA5hQ3i4eAdkTqT8B3GY1lLbmGm?usp=drive_link' },
+                        { id: '18319', cert: 'https://drive.google.com/file/d/1WuA9mL2M1VqprahnXWPRP9Q2kV4hbFlF/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/13uckAvRfKA1wnKKyUCoLgeVx5OdDT8z9?usp=drive_link' },
+                        { id: '18320', cert: 'https://drive.google.com/file/d/1TR_ZzKbzvyjS6f3teqJra5OttNOQOR1V/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1Lzf6oTGm1sxhQL35qhXB542NHSnywz5Q?usp=drive_link' },
+                        { id: '18321', cert: 'https://drive.google.com/file/d/1Z35NhVZWMg9E8VejFrd_oMridNEf_9aV/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1V_lpMAaxXrrdS2KfY_XhjLFBz1ERP8Gk?usp=drive_link' },
+                        { id: '18322', cert: 'https://drive.google.com/file/d/1fZ2jBQeH-Livn20r4jLWDgqQfx_4w3qH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VnGErx-bvQ-_hE_7qfTwOZxP5HzJH6N2?usp=drive_link' },
+                        { id: '18336', cert: 'https://drive.google.com/file/d/13QMh11-fcAGGPuubeytoOcoC_UdQKIu2/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1aRuj6VMs3k3p89v08L8tDBmsoHHH01dJ?usp=drive_link' },
+                        { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1i7fg8XXLQau2fYt5ap14_tLKAQkW8jmU/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VdvTz9XI27a1AMT4Y99CF-UxJ_d4JzrM?usp=drive_link' },
+                        { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1_jXewJTF7Z_LJAH7IHcwYhOti0vXqi2N/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1T--UcOeRGc5QLsPcxUfYO5Ckug89N9D2?usp=drive_link' },
+                        { id: 'AA-250570', cert: 'https://drive.google.com/file/d/1QHtZAG9VSOGBJyzZarvdBbMX2A-ZS_JB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1mIS2tTiS-z8VbGRuhRyoOQ7SK3Yc7BQc?usp=drive_link' },
+                        { id: 'AA-250571', cert: 'https://drive.google.com/file/d/1lqqR4vNZyLXJbMdfWwnyKVTu00mocbrD/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1xGft8P4y9k_D2zoNfjDWb1xkhwBraWU7?usp=drive_link' },
+                        { id: 'S50-17010', cert: 'https://drive.google.com/file/d/1YFnyeao8gQq8DhUY0NiQEr8hQ52giPJk/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1FQbaAG9LRpEXKMw5OSKuKqVLnpp3MRSP?usp=drive_link' },
+                        { id: 'S50-17011', cert: 'https://drive.google.com/file/d/1_ANgXKRwkCiR6G0IgB3uwKTvY6E7J0Wg/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1DYsWcfUQ7pR8M082eAdZlVvPQwth_JMG?usp=drive_link' },
+                        { id: 'Proses Penurunan ILR', doc: 'https://drive.google.com/file/d/1CLmmtE1p1anlfxrFO-y2KosXxkGdNGrR/view?usp=sharing' }
+                    ] 
+                },
+                { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1vQW3hQ3j5l0LgC1fLf-fVsz6Wt0MDaPf/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/126jEHFzES29-L2qTdTnhl85nnh0ts__Z?usp=sharing', icon: 'fas fa-ship' }
+            ]
+        }
+    }, 
+    'eirene': { 
+        name: 'KMP EIRENE', 
+        pt: 'PT SURYA TIMUR LINE', 
+        type: 'Ro-Ro Passenger Ship', 
+        image: 'https://static.vesselfinder.net/ship-photo/1047639-525701487-0f10aba875d56a11d3830a9b890f9353/1?v1', 
+        history: { 
+            '2025': [...defaultServices], // <-- Diperbaiki agar tidak menutup objek eirene secara prematur
+            '2026': [
+                { category: 'CO2 System', cert: 'https://drive.google.com/file/d/167wMpmIdOvG2azPuvfLqRnnTa2DQ0oXt/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1fK853VsC1Py0wn_72yEwSqPkY-EkYIJQ?usp=sharing', icon: 'fas fa-wind' },
+                { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1yxjvZoDwXbY-_d77trA2A37F5gXJ1nHQ/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1o1R3q07qGlKnugCLFRhxuNqoeGtAUVlj?usp=sharing', icon: 'fas fa-mask' },
+                { category: 'Fire Extinguisher (APAR)', cert: 'https://drive.google.com/file/d/1cLQY02L0zGU2_x_aVQLlEuVz1o6UNOhL/view?usp=sharing', doc: 'https://drive.google.com/file/d/1GZY48yPXgXOUISAgmU_PqnnwqaY9IfJq/view?usp=sharing', icon: 'fas fa-fire-extinguisher'},
+                { category: 'HRU', cert: 'https://drive.google.com/file/d/1xulCmSN5EAnNXScA5pGhYtpVsKgBP25y/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1VevB-_tSig3GOU7UJZKILJBmhKZWS094?usp=sharing', icon: 'fas fa-anchor' },
+                { 
+                    category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
+                    items: [
+                        { id: '18308', cert: 'https://drive.google.com/file/d/14CIIoIxwLb2--sbEpM5ayD9tSEuzdqoK/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1A76fVgSOHCMok49BNRe1Ht-lStFJCyEw?usp=sharing' },
+                        { id: '18309', cert: 'https://drive.google.com/drive/folders/1UxUcydxhMmBZeKj7uCoGiuF_iqYRch2y?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1JaZCjll_fuXifIonywU_xxnvRw87vuTV?usp=sharing' },
+                        { id: '18310', cert: 'https://drive.google.com/file/d/1zp4APCFeF27KRwSz2SeiZaN4MIZB7jGB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1SMRJH9PJrkoraYAJ3jdB3nCtXiKujbMH?usp=drive_link' },
+                        { id: '18311', cert: 'https://drive.google.com/file/d/1EkoBwlwD6DQLJy0Ql5zb3BqMREGqUe0E/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1P7Hx68k_2eZbNjLQs5O4lviSHacjl-c3?usp=drive_link' },
+                        { id: '18312', cert: 'https://drive.google.com/file/d/1klgOQvXwSTh2VGpi6XtkRptHF1lrxX48/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1AGPVsELdB2ha2PJz0qG0VyUpwQqLC9z9?usp=drive_link' },
+                        { id: '18313', cert: 'https://drive.google.com/file/d/1yiDubaAJPGtv40negcPNQjuz7ArPL_99/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1nfwNs-owamhPhSbfazRAkvnL8K37R4YD?usp=drive_link' },
+                        { id: '18314', cert: 'https://drive.google.com/file/d/1VPE8A31SMl3PxXiCZM12orEM-XBnhCoX/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/17V-tCCama08bAsJxykUK9ad_71BPL8qN?usp=drive_link' },
+                        { id: '18315', cert: 'https://drive.google.com/file/d/1wBkciWZ8wzVNSEjvmpXjoEljLC0iCPvH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1qjupYrtoCfUOi2sFv8-chWh2Rt68-JNF?usp=drive_link' },
+                        { id: '18316', cert: 'https://drive.google.com/file/d/19YAdfD9IuYyOT5jo4Uf4T8XptJvxkTMB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1pABeDu-7Ypy1WZvOfHbBwva347Nd5Czx?usp=drive_link' },
+                        { id: '18317', cert: 'https://drive.google.com/file/d/1BheePqXXglyOkl2pt3fbTRiMuLgGK628/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1vzTanNuOB4Szk3uR7aBIxCTmOgM9xJO-?usp=drive_link' },
+                        { id: '18318', cert: 'https://drive.google.com/file/d/1SjfJPAkd6hgOmA2d-Q6cMEX41Q7KggNb/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1_FhuvOA5hQ3i4eAdkTqT8B3GY1lLbmGm?usp=drive_link' },
+                        { id: '18319', cert: 'https://drive.google.com/file/d/1WuA9mL2M1VqprahnXWPRP9Q2kV4hbFlF/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/13uckAvRfKA1wnKKyUCoLgeVx5OdDT8z9?usp=drive_link' },
+                        { id: '18320', cert: 'https://drive.google.com/file/d/1TR_ZzKbzvyjS6f3teqJra5OttNOQOR1V/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1Lzf6oTGm1sxhQL35qhXB542NHSnywz5Q?usp=drive_link' },
+                        { id: '18321', cert: 'https://drive.google.com/file/d/1Z35NhVZWMg9E8VejFrd_oMridNEf_9aV/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1V_lpMAaxXrrdS2KfY_XhjLFBz1ERP8Gk?usp=drive_link' },
+                        { id: '18322', cert: 'https://drive.google.com/file/d/1fZ2jBQeH-Livn20r4jLWDgqQfx_4w3qH/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VnGErx-bvQ-_hE_7qfTwOZxP5HzJH6N2?usp=drive_link' },
+                        { id: '18336', cert: 'https://drive.google.com/file/d/13QMh11-fcAGGPuubeytoOcoC_UdQKIu2/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1aRuj6VMs3k3p89v08L8tDBmsoHHH01dJ?usp=drive_link' },
+                        { id: 'AA-250547', cert: 'https://drive.google.com/file/d/1i7fg8XXLQau2fYt5ap14_tLKAQkW8jmU/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1VdvTz9XI27a1AMT4Y99CF-UxJ_d4JzrM?usp=drive_link' },
+                        { id: 'AA-250563', cert: 'https://drive.google.com/file/d/1_jXewJTF7Z_LJAH7IHcwYhOti0vXqi2N/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1T--UcOeRGc5QLsPcxUfYO5Ckug89N9D2?usp=drive_link' },
+                        { id: 'AA-250570', cert: 'https://drive.google.com/file/d/1QHtZAG9VSOGBJyzZarvdBbMX2A-ZS_JB/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1mIS2tTiS-z8VbGRuhRyoOQ7SK3Yc7BQc?usp=drive_link' },
+                        { id: 'AA-250571', cert: 'https://drive.google.com/file/d/1lqqR4vNZyLXJbMdfWwnyKVTu00mocbrD/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1xGft8P4y9k_D2zoNfjDWb1xkhwBraWU7?usp=drive_link' },
+                        { id: 'S50-17010', cert: 'https://drive.google.com/file/d/1YFnyeao8gQq8DhUY0NiQEr8hQ52giPJk/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1FQbaAG9LRpEXKMw5OSKuKqVLnpp3MRSP?usp=drive_link' },
+                        { id: 'S50-17011', cert: 'https://drive.google.com/file/d/1_ANgXKRwkCiR6G0IgB3uwKTvY6E7J0Wg/view?usp=drive_link', doc: 'https://drive.google.com/drive/folders/1DYsWcfUQ7pR8M082eAdZlVvPQwth_JMG?usp=drive_link' },
+                        { id: 'Proses Penurunan ILR', doc: 'https://drive.google.com/file/d/1CLmmtE1p1anlfxrFO-y2KosXxkGdNGrR/view?usp=sharing' }
+                    ] 
+                },
+                { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1vQW3hQ3j5l0LgC1fLf-fVsz6Wt0MDaPf/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/126jEHFzES29-L2qTdTnhl85nnh0ts__Z?usp=sharing', icon: 'fas fa-ship' }
+            ]
+        }
+    },
+    'tranship-i': { name: 'KMP TRANSHIP I', pt: 'PT TRANSHIP INDONESIA', type: 'Ro-Ro Passenger Ship', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtFzeGV-78Dum9zR9jjAqrrSVt0yXAjHSumw&s', history: { '2025': [...defaultServices] }}
+};
 
         let selectedPT = null;
 
