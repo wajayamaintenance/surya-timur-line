@@ -285,13 +285,44 @@
             { category: 'HRU', cert: '#', doc: '#', icon: 'fas fa-anchor' },
             { category: 'ILR', cert: '#', doc: '#', icon: 'fas fa-life-ring' },
             { category: 'Lifeboat', cert: '#', doc: '#', icon: 'fas fa-ship' }
-        ];
+        ]; 
 
         const fleetData = {
     'amarisa': { name: 'KMP AMARISA', pt: 'PT ALHADII LAMPUNG BERJAYA', type: 'Ro-Ro Passenger Ship', image: 'https://www.shipspotting.com/photos/big/4/9/8/3874894.jpg?cb=0', history: { '2025': [...defaultServices] }},
     'amadea': { name: 'KMP AMADEA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/BOgi-FnE8l4/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
     'nitya': { name: 'KMP NITYA', pt: 'PT NAUFAL BROTHERS COMPANY', type: 'Ro-Ro Passenger Ship', image: 'https://static.vesselfinder.net/ship-photo/1071484-525801319-2a104b0fa533d4f324add4219f9418a0/1?v1', history: { '2025': [...defaultServices] }},
-    'rishel': { name: 'KMP RISHEL', pt: 'PT SURYA TIMUR LINE', type: 'Ro-Ro Passenger Ship', image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg', history: { '2025': [...defaultServices] }},
+    'rishel': { 
+        name: 'KMP RISHEL', 
+        pt: 'PT SURYA TIMUR LINE', 
+        type: 'Ro-Ro Passenger Ship', 
+        image: 'https://i.ytimg.com/vi/d3quNKC44xI/maxresdefault.jpg', 
+        history: { 
+            '2026': [
+                { category: 'CO2 System', cert: 'https://drive.google.com/file/d/1d6aN0XwrZWqoX0haJ62nJ8a0IEUYb9Is/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1smhcz62jjAh7sP_oLzS6MXLFvzqulwXP?usp=drive_link', icon: 'fas fa-wind' },
+                { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1EXes94WZ2bItokJs6hOLmOHtbIRNmBkl/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/185ezKd_tBvzEyouAp6NjgPp-9hyA6QZg?usp=drive_link', icon: 'fas fa-mask' },
+                { category: 'Fire Extinguisher (APAR)', cert: 'https://drive.google.com/file/d/1Y7E0EiqJezF1m-eejHMk7chnvw39o9a8/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/18k8eHwHxrZ_AW-JXvU_NRm7PzpYt5654?usp=sharing', icon: 'fas fa-fire-extinguisher'},
+                { 
+                    category: 'ILR', icon: 'fas fa-life-ring', isMultiItem: true,
+                    items: [
+                        { id: '0027', cert: 'https://drive.google.com/file/d/1k8ljE_8MMWlWVcTjLD41gOZfEPgOAwyN/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1jSQgleSZH8OuR-B0wdfUGjyYfdfUrYA4?usp=sharing' },
+                        { id: '0028', cert: 'https://drive.google.com/file/d/1fZNbZOYupRYA5yQyp2Ycho0Bq6zWvJ7N/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1Xf55ZS2rFVQh0gJp2dz52ORU0Sqzg2uP?usp=sharing' },
+                        { id: '0029', cert: 'https://drive.google.com/file/d/1Aj-benQqO2lrWxDyxF-4joHNvjqeolpi/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1Gz8--XxtpXOHKO4EYGD6BxXUTB9xjJVg?usp=sharing' },
+                        { id: '0030', cert: 'https://drive.google.com/file/d/11nCDfGpksdryM9F1WonOVur89hFIlhd1/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1RIhcMiMMNBJGnvuVRlhefVY77hGZ2CrI?usp=sharing' },
+                        { id: '0314', cert: 'https://drive.google.com/file/d/155UE3S849VSdjn-CrXFDveL4mxWi-fQw/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1ralv4qVOGJmu_YLkJAacg1kQE3QVfy7J?usp=sharing' },
+                        { id: '0315', cert: 'https://drive.google.com/file/d/1TJKzRxkWD_XfMKUPWpxeDNgwvxogXUDw/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1FjQ3RIrYOEEAyi3i6NTfScHj9xK4rt63?usp=sharing' },
+                        { id: '0316', cert: 'https://drive.google.com/file/d/1yG8ICd0LKPz4apY_52MhX1fjuxhNrzlC/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1lu3wEom88cNYU2QCAWbsjANJOPtEwbhP?usp=sharing' },
+                        { id: '0317', cert: 'https://drive.google.com/file/d/1FoEITGdi-DmFk8ZmlFbr2Wp-e53aMjkJ/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1CuEpY5aARiETCssavpfnWWyxVd8abgpR?usp=sharing' },
+                        { id: '0318', cert: 'https://drive.google.com/file/d/10Bewf3l56o80rdOXrAETcw9I5jpp8lZr/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1KQk76ln2ZhBHPqXOzwE0cOz8MDyx1-m8?usp=sharing' },
+                        { id: '0319', cert: 'https://drive.google.com/file/d/11uZGjWhi5gEbsNfiAbJtgyNY7ycYUFpF/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/1FolRxmASrv0_F9ZW-yy4Y72oc5Gpc1OB?usp=sharing' },
+                        { id: 'Proses Penurunan ILR', doc: 'https://drive.google.com/file/d/1HCrn8-UP7VehChwdUOMXu4i4fKvpDg8b/view?usp=sharing' },
+                        { id: 'Proses Pemasangan ILR', doc: 'https://drive.google.com/drive/folders/1Gtz68zj3Z67aAe4OEQx8q-hxPqrn0tlO?usp=sharing' }
+                    ] 
+                },
+                { category: 'Lifeboat', cert: 'https://drive.google.com/file/d/1DuTf9fRCKaPx99hz34HxPfZkypjrFAfh/view?usp=sharing', doc: 'https://drive.google.com/drive/folders/17OLmOd1JEqIte-6NTwbqlgai-xnYBXww?usp=sharing', icon: 'fas fa-ship' }
+            ] // <-- Diperbaiki agar tidak menutup objek eirene secara prematur
+            
+        }
+    },
     'zoey': {
         name: 'KMP ZOEY',
         pt: 'PT SURYA TIMUR LINE',
@@ -299,8 +330,8 @@
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmKTCGWe8u1u0HS8ZCZUx755H04KPjHSycIA&s', 
         history: {
             '2025': [
-                { category: 'CO2 System', cert: 'https://drive.google.com/file/d/19sKBeWYq0rCL9U1Qyl1vRFWk9Jc259Cp/view?usp=sharing', doc: '#', icon: 'fas fa-wind' },
-                { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/1h7j_eCbzldva28edZOivICnZP3FhLcHi/view?usp=sharing', doc: '#', icon: 'fas fa-mask' },
+                { category: 'CO2 System', cert: 'https://drive.google.com/file/d/1d6aN0XwrZWqoX0haJ62nJ8a0IEUYb9Is/view?usp=sharing', doc: '#', icon: 'fas fa-wind' },
+                { category: 'EEBD & SCBA', cert: 'https://drive.google.com/file/d/119T8lD_WG3xStH8W-Fcf7uJZVca3EaWt/view?usp=sharing', doc: '#', icon: 'fas fa-mask' },
                 { category: 'Fire Extinguisher (APAR)', icon: 'fas fa-fire-extinguisher', isMultiItem: true,
                     items: [
                         { id: 'APAR_DCS-FE.25.001', cert: 'https://drive.google.com/file/d/1xd2twTLYCC2Q7V0N1yjTCStMDusonMHk/view?usp=sharing', doc: '' },
